@@ -10,10 +10,8 @@ import javax.swing.border.EmptyBorder;
 public class InputAddForm extends JFrame {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
+	public InputMgmtPanel inputMgmtPanel;
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

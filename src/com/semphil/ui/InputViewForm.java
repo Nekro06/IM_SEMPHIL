@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 public class InputViewForm extends JFrame {
 
 	private JPanel contentPane;
+	public InputMgmtPanel inputMgmtPanel;
 
 	/**
 	 * Launch the application.
