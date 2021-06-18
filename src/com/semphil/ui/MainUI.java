@@ -16,10 +16,17 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import com.semphil.bean.*;
+import com.semphil.repo.*;
+
 public class MainUI extends JFrame {
-
+	
+	// Declaration of Objects
 	private JPanel jpnlContentPane;
-
+	private com.semphil.ui.InputMgmtPanel inputMgmtPanel;
+	private com.semphil.ui.WelcomePanel welcomePanel = new WelcomePanel();
+	private JPanel currentShownPanel;
+	
 	public MainUI() {
 		setTitle("SEMPHIL AGREEMENT SYSTEM");
 		setMinimumSize(new Dimension(1300, 600));
@@ -40,7 +47,7 @@ public class MainUI extends JFrame {
 		
 		JLabel lblHeader1 = new JLabel("<html> Samsung Electro Mechanics Philippines Corporation </html>");
 		lblHeader1.setForeground(Color.WHITE);
-		lblHeader1.setFont(new Font("Helvetica LT Std Cond", Font.ITALIC, 15));
+		lblHeader1.setFont(new Font("Helvetica LT Std Cond", Font.ITALIC, 16));
 		lblHeader1.setBorder(new EmptyBorder(10, 10, 5, 10));
 		lblHeader1.setAlignmentY(0.0f);
 		jpnlSidebar.add(lblHeader1);
@@ -52,33 +59,36 @@ public class MainUI extends JFrame {
 		lblHeader2.setAlignmentY(0.0f);
 		jpnlSidebar.add(lblHeader2);
 		
-		/*if(currentShownPanel != null && currentShownPanel != welcomePanel)
+		if(currentShownPanel != null && currentShownPanel != welcomePanel)
 			remove(currentShownPanel);
 		currentShownPanel = welcomePanel;
-		getContentPane().add(welcomePanel, BorderLayout.CENTER);*/
+		getContentPane().add(welcomePanel, BorderLayout.CENTER);
 		
-		// JButton for Entity "Medical Staff" - when clicked, will display its Management Panel
-		JButton btnStaffPanel = new JButton("MANAGEMENT PANEL");
-		/*btnStaffPanel.addActionListener(new ActionListener() {
+		// JButton for the InputMgmtPanel when clicked, will display its Management Panel
+		JButton btnMgmtPanel = new JButton("MANAGEMENT PANEL");
+		btnMgmtPanel.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if(currentShownPanel != null && currentShownPanel != staffMgmtPanel)
+				if(currentShownPanel != null && currentShownPanel != inputMgmtPanel)
 					remove(currentShownPanel);
-				currentShownPanel = staffMgmtPanel;
-				getContentPane().add(staffMgmtPanel, BorderLayout.CENTER);
+				currentShownPanel = inputMgmtPanel;
+				getContentPane().add(inputMgmtPanel, BorderLayout.CENTER);
 				revalidate();
 				repaint();
 			}
-		});*/
-		btnStaffPanel.setForeground(new Color(255, 255, 255));
-		btnStaffPanel.setBackground(new Color(128, 0, 0));
-		btnStaffPanel.setMinimumSize(new Dimension(75, 35));
-		btnStaffPanel.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-		btnStaffPanel.setHorizontalAlignment(SwingConstants.LEFT);
-		btnStaffPanel.setMaximumSize(new Dimension(32767, 35));
-		btnStaffPanel.setBorderPainted(false);
-		btnStaffPanel.setFocusPainted(false);
-		jpnlSidebar.add(btnStaffPanel);
+		});
+		btnMgmtPanel.setForeground(new Color(255, 255, 255));
+		btnMgmtPanel.setBackground(new Color(72, 61, 139));
+		btnMgmtPanel.setMinimumSize(new Dimension(75, 35));
+		btnMgmtPanel.setFont(new Font("Helvetica LT Std", Font.PLAIN, 15));
+		btnMgmtPanel.setHorizontalAlignment(SwingConstants.LEFT);
+		btnMgmtPanel.setMaximumSize(new Dimension(32767, 35));
+		btnMgmtPanel.setBorderPainted(false);
+		btnMgmtPanel.setFocusPainted(false);
+		jpnlSidebar.add(btnMgmtPanel);
 	}
 
+	public void setInputMgmtPanel(com.semphil.ui.InputMgmtPanel inputMgmtPanel) {
+		this.inputMgmtPanel = inputMgmtPanel;
+	}
 }
