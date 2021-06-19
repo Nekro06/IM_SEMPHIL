@@ -35,6 +35,10 @@ public class InputMgmtPanel extends JPanel {
 	protected InputViewForm inputViewForm;
 	protected InputTableModel departmentTableModel;
 	protected DepartmentRepo departmentRepo;
+	protected VendorRepo vendorRepo;
+	protected BankRepo bankRepo;
+	protected RegistrationRepo registrationRepo;
+	protected PaymentRepo paymentRepo;
 
 	public InputMgmtPanel() {
 		setMinimumSize(new Dimension(500, 500));
@@ -126,6 +130,28 @@ public class InputMgmtPanel extends JPanel {
 	public void setDepartmentRepo(DepartmentRepo departmentRepo) {
 		this.departmentRepo = departmentRepo;
 	}
+	
+	public void setVendorRepo (VendorRepo vendorRepo) {
+		
+		this.vendorRepo = vendorRepo;
+	}
+	
+	public void setBankRepo (BankRepo bankRepo) {
+		
+		this.bankRepo = bankRepo;
+	}
+	
+	public void setPaymentRepo (PaymentRepo paymentRepo) {
+		
+		this.paymentRepo = paymentRepo;
+	}
+	
+	public void setRegistrationRepo (RegistrationRepo registrationRepo) {
+		
+		this.registrationRepo = registrationRepo;
+	}
+	
+	
 	
 	// LINK OTHER REPOSITORIES HERE
 
