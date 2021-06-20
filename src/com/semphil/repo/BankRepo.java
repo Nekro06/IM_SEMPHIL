@@ -2,11 +2,7 @@ package com.semphil.repo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 import javax.sql.DataSource;
 
 import com.semphil.bean.Bank;
@@ -23,7 +19,7 @@ private DataSource dataSource;
 		try(
 			Connection connection = dataSource.getConnection();
 			PreparedStatement insertStatement =
-					connection.prepareStatement("INSERT INTO department VALUES (?, ?, ?)")) {
+					connection.prepareStatement("INSERT INTO bank VALUES (?, ?, ?)")) {
 			
 			insertStatement.setString(1, bank.getRegion_bank_code());
 			insertStatement.setString(2, bank.getBank_name());

@@ -1,9 +1,9 @@
 package com.semphil.ui;
 
 /*
- *	Name of Class: DepartmentMgmtPanel.java
- *		This is the class for the GUI of the Department Management Panel. 
- *		It contains the table where all data of entity "Department" is shown.
+ *	Name of Class: InputMgmtPanel.java
+ *		This is the class for the GUI of the Input Management Panel. 
+ *		It contains the table where all data of entity "Registration" is shown.
  */
 
 import javax.swing.JPanel;
@@ -33,7 +33,7 @@ public class InputMgmtPanel extends JPanel {
 	private JTable tblInput;
 	protected InputAddForm inputAddForm;
 	protected InputViewForm inputViewForm;
-	protected InputTableModel departmentTableModel;
+	protected InputTableModel inputTableModel;
 	protected DepartmentRepo departmentRepo;
 	protected VendorRepo vendorRepo;
 	protected BankRepo bankRepo;
@@ -76,23 +76,23 @@ public class InputMgmtPanel extends JPanel {
 		
 		JButton btnView = new JButton("VIEW FORM");
 		btnView.setMinimumSize(new Dimension(150, 25));
-		/*btnView.setMinimumSize(new Dimension(100, 35));
+		btnView.setMinimumSize(new Dimension(100, 35));
 		btnView.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				int rowIndex = tblDepartment.getSelectedRow();
+				int rowIndex = tblInput.getSelectedRow();
 				
 				if(rowIndex == -1) {
-					JOptionPane.showMessageDialog(null, "Please select a department!", "WARNING!", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Please select a registration!", "WARNING!", JOptionPane.WARNING_MESSAGE);
 					return;
 				}
 				
-				int dept_id = (int) departmentTableModel.getValueAt(rowIndex, 0);
-				Department department = departmentRepository.getByDepartmentID(dept_id);
+				String registration_code = (String) inputTableModel.getValueAt(rowIndex, 0);
+				Registration registration = registrationRepo.getByRegistrationCode(registration_code);
 				
-				departmentViewForm.viewDataInDialog(department);
-				departmentViewForm.setVisible(true);
+				//inputViewForm.viewDataInDialog(registration);
+				inputViewForm.setVisible(true);
 			}
-		});*/
+		});
 		btnView.setPreferredSize(new Dimension(150, 35));
 		btnView.setMaximumSize(new Dimension(150, 35));
 		btnView.setFont(new Font("Segoe UI", Font.PLAIN, 17));
@@ -102,7 +102,7 @@ public class InputMgmtPanel extends JPanel {
 		btnAdd.setMinimumSize(new Dimension(150, 35));
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//departmentAddForm.setVisible(true);
+				inputAddForm.setVisible(true);
 			}
 		});
 		btnAdd.setPreferredSize(new Dimension(150, 35));
@@ -114,15 +114,15 @@ public class InputMgmtPanel extends JPanel {
 		add(scrollPane);
 		
 		// Linking the JTable to this Management Panel
-		/*tblDepartment = new JTable();
-		tblDepartment.setRowHeight(20);
-		tblDepartment.setFont(new Font("Segoe UI", Font.PLAIN, 15));
-		scrollPane.setViewportView(tblDepartment);
+		tblInput = new JTable();
+		tblInput.setRowHeight(20);
+		tblInput.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+		scrollPane.setViewportView(tblInput);
 		
 		// Using the created Table Model as architecture for the JTable
-		departmentTableModel = new DepartmentTableModel();
-		departmentTableModel.departmentMgmtPanel = this;
-		tblDepartment.setModel(departmentTableModel);*/
+		inputTableModel = new InputTableModel();
+		inputTableModel.inputMgmtPanel = this;
+		tblInput.setModel(inputTableModel);
 
 	}
 	
@@ -132,27 +132,19 @@ public class InputMgmtPanel extends JPanel {
 	}
 	
 	public void setVendorRepo (VendorRepo vendorRepo) {
-		
 		this.vendorRepo = vendorRepo;
 	}
 	
 	public void setBankRepo (BankRepo bankRepo) {
-		
 		this.bankRepo = bankRepo;
 	}
 	
 	public void setPaymentRepo (PaymentRepo paymentRepo) {
-		
 		this.paymentRepo = paymentRepo;
 	}
 	
 	public void setRegistrationRepo (RegistrationRepo registrationRepo) {
-		
 		this.registrationRepo = registrationRepo;
 	}
-	
-	
-	
-	// LINK OTHER REPOSITORIES HERE
 
 }
