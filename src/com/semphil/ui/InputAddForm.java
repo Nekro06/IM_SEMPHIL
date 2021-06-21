@@ -19,32 +19,32 @@ import java.awt.Dimension;
 public class InputAddForm extends JDialog {
 	private JTextField txtDept_id;
 	private JTextField txtCompany_id;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
-	private JTextField textField_14;
-	private JTextField textField_15;
-	private JTextField textField_16;
-	private JTextField textField_17;
-	private JTextField textField_18;
-	private JTextField textField_19;
-	private JTextField textField_20;
-	private JTextField textField_21;
-	private JTextField textField_22;
-	private JTextField textField_23;
-	private JTextField textField_24;
-	private JTextField textField_25;
-	private JTextField textField_26;
-	private JTextField textField_27;
+	private JTextField txtRequesting_dept;
+	private JTextField txtRegistration_code;
+	private JTextField txtProducts_services;
+	private JTextField txtPayment_id;
+	private JTextField txtRegistration_purpose;
+	private JTextField txtRegistration_date;
+	private JTextField txtCompany_name;
+	private JTextField txtLocation_street;
+	private JTextField txtLocation_city;
+	private JTextField txtLocation_district;
+	private JTextField txtLocation_country;
+	private JTextField txtPostal_code;
+	private JTextField txtTelephone_number;
+	private JTextField txtBusiness_reg_number;
+	private JTextField txtFax_number;
+	private JTextField txtRegion_bank_code;
+	private JTextField txtBank_name;
+	private JTextField txtPayment_code;
+	private JTextField txtSwift_code;
+	private JTextField txtAccount_number;
+	private JTextField txtContact_person;
+	private JTextField txtContact_number;
+	private JTextField txtEmail_address;
+	private JTextField txtOrder_currency;
+	private JTextField txtPort_of_lading;
+	private JTextField txtIncoterms;
 	public InputMgmtPanel inputMgmtPanel;
 
 	/**
@@ -135,132 +135,132 @@ public class InputAddForm extends JDialog {
 				contentPane.add(txtCompany_id, gbc_txtCompany_id);
 			}
 			{
-				JLabel lblRequestingDepartment = new JLabel("Requesting Department :");
-				lblRequestingDepartment.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblRequestingDepartment = new GridBagConstraints();
-				gbc_lblRequestingDepartment.anchor = GridBagConstraints.EAST;
-				gbc_lblRequestingDepartment.insets = new Insets(0, 0, 5, 5);
-				gbc_lblRequestingDepartment.gridx = 0;
-				gbc_lblRequestingDepartment.gridy = 2;
-				contentPane.add(lblRequestingDepartment, gbc_lblRequestingDepartment);
+				JLabel lblRequesting_dept = new JLabel("Requesting Department :");
+				lblRequesting_dept.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblRequesting_dept = new GridBagConstraints();
+				gbc_lblRequesting_dept.anchor = GridBagConstraints.EAST;
+				gbc_lblRequesting_dept.insets = new Insets(0, 0, 5, 5);
+				gbc_lblRequesting_dept.gridx = 0;
+				gbc_lblRequesting_dept.gridy = 2;
+				contentPane.add(lblRequesting_dept, gbc_lblRequesting_dept);
 			}
 			{
-				textField_2 = new JTextField();
-				textField_2.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_2.setColumns(10);
-				GridBagConstraints gbc_textField_2 = new GridBagConstraints();
-				gbc_textField_2.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_2.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_2.gridx = 1;
-				gbc_textField_2.gridy = 2;
-				contentPane.add(textField_2, gbc_textField_2);
+				txtRequesting_dept = new JTextField();
+				txtRequesting_dept.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtRequesting_dept.setColumns(10);
+				GridBagConstraints gbc_txtRequesting_dept = new GridBagConstraints();
+				gbc_txtRequesting_dept.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtRequesting_dept.insets = new Insets(0, 0, 5, 5);
+				gbc_txtRequesting_dept.gridx = 1;
+				gbc_txtRequesting_dept.gridy = 2;
+				contentPane.add(txtRequesting_dept, gbc_txtRequesting_dept);
 			}
 			{
-				JLabel lblRegistrationCode = new JLabel("Registration Code :");
-				lblRegistrationCode.setForeground(Color.RED);
-				lblRegistrationCode.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
-				GridBagConstraints gbc_lblRegistrationCode = new GridBagConstraints();
-				gbc_lblRegistrationCode.anchor = GridBagConstraints.EAST;
-				gbc_lblRegistrationCode.insets = new Insets(0, 0, 5, 5);
-				gbc_lblRegistrationCode.gridx = 2;
-				gbc_lblRegistrationCode.gridy = 2;
-				contentPane.add(lblRegistrationCode, gbc_lblRegistrationCode);
+				JLabel lblRegistration_code = new JLabel("Registration Code :");
+				lblRegistration_code.setForeground(Color.RED);
+				lblRegistration_code.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
+				GridBagConstraints gbc_lblRegistration_code = new GridBagConstraints();
+				gbc_lblRegistration_code.anchor = GridBagConstraints.EAST;
+				gbc_lblRegistration_code.insets = new Insets(0, 0, 5, 5);
+				gbc_lblRegistration_code.gridx = 2;
+				gbc_lblRegistration_code.gridy = 2;
+				contentPane.add(lblRegistration_code, gbc_lblRegistration_code);
 			}
 			{
-				textField_3 = new JTextField();
-				textField_3.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_3.setColumns(10);
-				GridBagConstraints gbc_textField_3 = new GridBagConstraints();
-				gbc_textField_3.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_3.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_3.gridx = 3;
-				gbc_textField_3.gridy = 2;
-				contentPane.add(textField_3, gbc_textField_3);
+				txtRegistration_code = new JTextField();
+				txtRegistration_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtRegistration_code.setColumns(10);
+				GridBagConstraints gbc_txtRegistration_code = new GridBagConstraints();
+				gbc_txtRegistration_code.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtRegistration_code.insets = new Insets(0, 0, 5, 0);
+				gbc_txtRegistration_code.gridx = 3;
+				gbc_txtRegistration_code.gridy = 2;
+				contentPane.add(txtRegistration_code, gbc_txtRegistration_code);
 			}
 			{
-				JLabel lblProductsServices = new JLabel("Products / Services :");
-				lblProductsServices.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblProductsServices = new GridBagConstraints();
-				gbc_lblProductsServices.anchor = GridBagConstraints.EAST;
-				gbc_lblProductsServices.insets = new Insets(0, 0, 5, 5);
-				gbc_lblProductsServices.gridx = 0;
-				gbc_lblProductsServices.gridy = 3;
-				contentPane.add(lblProductsServices, gbc_lblProductsServices);
+				JLabel lblProducts_services = new JLabel("Products / Services :");
+				lblProducts_services.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblProducts_services = new GridBagConstraints();
+				gbc_lblProducts_services.anchor = GridBagConstraints.EAST;
+				gbc_lblProducts_services.insets = new Insets(0, 0, 5, 5);
+				gbc_lblProducts_services.gridx = 0;
+				gbc_lblProducts_services.gridy = 3;
+				contentPane.add(lblProducts_services, gbc_lblProducts_services);
 			}
 			{
-				textField_4 = new JTextField();
-				textField_4.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_4.setColumns(10);
-				GridBagConstraints gbc_textField_4 = new GridBagConstraints();
-				gbc_textField_4.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_4.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_4.gridx = 1;
-				gbc_textField_4.gridy = 3;
-				contentPane.add(textField_4, gbc_textField_4);
+				txtProducts_services = new JTextField();
+				txtProducts_services.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtProducts_services.setColumns(10);
+				GridBagConstraints gbc_txtProducts_services = new GridBagConstraints();
+				gbc_txtProducts_services.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtProducts_services.insets = new Insets(0, 0, 5, 5);
+				gbc_txtProducts_services.gridx = 1;
+				gbc_txtProducts_services.gridy = 3;
+				contentPane.add(txtProducts_services, gbc_txtProducts_services);
 			}
 			{
-				JLabel lblPaymentId = new JLabel("Payment ID :");
-				lblPaymentId.setForeground(Color.RED);
-				lblPaymentId.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
-				GridBagConstraints gbc_lblPaymentId = new GridBagConstraints();
-				gbc_lblPaymentId.anchor = GridBagConstraints.EAST;
-				gbc_lblPaymentId.insets = new Insets(0, 0, 5, 5);
-				gbc_lblPaymentId.gridx = 2;
-				gbc_lblPaymentId.gridy = 3;
-				contentPane.add(lblPaymentId, gbc_lblPaymentId);
+				JLabel lblPayment_id = new JLabel("Payment ID :");
+				lblPayment_id.setForeground(Color.RED);
+				lblPayment_id.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
+				GridBagConstraints gbc_lblPayment_id = new GridBagConstraints();
+				gbc_lblPayment_id.anchor = GridBagConstraints.EAST;
+				gbc_lblPayment_id.insets = new Insets(0, 0, 5, 5);
+				gbc_lblPayment_id.gridx = 2;
+				gbc_lblPayment_id.gridy = 3;
+				contentPane.add(lblPayment_id, gbc_lblPayment_id);
 			}
 			{
-				textField_5 = new JTextField();
-				textField_5.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_5.setColumns(10);
-				GridBagConstraints gbc_textField_5 = new GridBagConstraints();
-				gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_5.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_5.gridx = 3;
-				gbc_textField_5.gridy = 3;
-				contentPane.add(textField_5, gbc_textField_5);
+				txtPayment_id = new JTextField();
+				txtPayment_id.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtPayment_id.setColumns(10);
+				GridBagConstraints gbc_txtPayment_id = new GridBagConstraints();
+				gbc_txtPayment_id.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtPayment_id.insets = new Insets(0, 0, 5, 0);
+				gbc_txtPayment_id.gridx = 3;
+				gbc_txtPayment_id.gridy = 3;
+				contentPane.add(txtPayment_id, gbc_txtPayment_id);
 			}
 			{
-				JLabel lblPurpose = new JLabel("Purpose :");
-				lblPurpose.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblPurpose = new GridBagConstraints();
-				gbc_lblPurpose.anchor = GridBagConstraints.EAST;
-				gbc_lblPurpose.insets = new Insets(0, 0, 5, 5);
-				gbc_lblPurpose.gridx = 0;
-				gbc_lblPurpose.gridy = 4;
-				contentPane.add(lblPurpose, gbc_lblPurpose);
+				JLabel lblRegistration_purpose = new JLabel("Purpose :");
+				lblRegistration_purpose.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblRegistration_purpose = new GridBagConstraints();
+				gbc_lblRegistration_purpose.anchor = GridBagConstraints.EAST;
+				gbc_lblRegistration_purpose.insets = new Insets(0, 0, 5, 5);
+				gbc_lblRegistration_purpose.gridx = 0;
+				gbc_lblRegistration_purpose.gridy = 4;
+				contentPane.add(lblRegistration_purpose, gbc_lblRegistration_purpose);
 			}
 			{
-				textField_6 = new JTextField();
-				textField_6.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_6.setColumns(10);
-				GridBagConstraints gbc_textField_6 = new GridBagConstraints();
-				gbc_textField_6.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_6.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_6.gridx = 1;
-				gbc_textField_6.gridy = 4;
-				contentPane.add(textField_6, gbc_textField_6);
+				txtRegistration_purpose = new JTextField();
+				txtRegistration_purpose.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtRegistration_purpose.setColumns(10);
+				GridBagConstraints gbc_txtRegistration_purpose = new GridBagConstraints();
+				gbc_txtRegistration_purpose.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtRegistration_purpose.insets = new Insets(0, 0, 5, 5);
+				gbc_txtRegistration_purpose.gridx = 1;
+				gbc_txtRegistration_purpose.gridy = 4;
+				contentPane.add(txtRegistration_purpose, gbc_txtRegistration_purpose);
 			}
 			{
-				JLabel lblDate = new JLabel("Date of Registration :");
-				lblDate.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblDate = new GridBagConstraints();
-				gbc_lblDate.anchor = GridBagConstraints.EAST;
-				gbc_lblDate.insets = new Insets(0, 0, 5, 5);
-				gbc_lblDate.gridx = 2;
-				gbc_lblDate.gridy = 4;
-				contentPane.add(lblDate, gbc_lblDate);
+				JLabel lblRegistration_date = new JLabel("Date of Registration :");
+				lblRegistration_date.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblRegistration_date = new GridBagConstraints();
+				gbc_lblRegistration_date.anchor = GridBagConstraints.EAST;
+				gbc_lblRegistration_date.insets = new Insets(0, 0, 5, 5);
+				gbc_lblRegistration_date.gridx = 2;
+				gbc_lblRegistration_date.gridy = 4;
+				contentPane.add(lblRegistration_date, gbc_lblRegistration_date);
 			}
 			{
-				textField_7 = new JTextField();
-				textField_7.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_7.setColumns(10);
-				GridBagConstraints gbc_textField_7 = new GridBagConstraints();
-				gbc_textField_7.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_7.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_7.gridx = 3;
-				gbc_textField_7.gridy = 4;
-				contentPane.add(textField_7, gbc_textField_7);
+				txtRegistration_date = new JTextField();
+				txtRegistration_date.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtRegistration_date.setColumns(10);
+				GridBagConstraints gbc_txtRegistration_date = new GridBagConstraints();
+				gbc_txtRegistration_date.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtRegistration_date.insets = new Insets(0, 0, 5, 0);
+				gbc_txtRegistration_date.gridx = 3;
+				gbc_txtRegistration_date.gridy = 4;
+				contentPane.add(txtRegistration_date, gbc_txtRegistration_date);
 			}
 			{
 				JLabel lblHeader_2 = new JLabel("To be filled up by VENDOR / CUSTOMER");
@@ -282,194 +282,194 @@ public class InputAddForm extends JDialog {
 				contentPane.add(lblSubheader_1, gbc_lblSubheader_1);
 			}
 			{
-				JLabel lblCompanyName = new JLabel("Company Name :");
-				lblCompanyName.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName = new GridBagConstraints();
-				gbc_lblCompanyName.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName.gridx = 0;
-				gbc_lblCompanyName.gridy = 7;
-				contentPane.add(lblCompanyName, gbc_lblCompanyName);
+				JLabel lblCompany_name = new JLabel("Company Name :");
+				lblCompany_name.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblCompany_name = new GridBagConstraints();
+				gbc_lblCompany_name.anchor = GridBagConstraints.EAST;
+				gbc_lblCompany_name.insets = new Insets(0, 0, 5, 5);
+				gbc_lblCompany_name.gridx = 0;
+				gbc_lblCompany_name.gridy = 7;
+				contentPane.add(lblCompany_name, gbc_lblCompany_name);
 			}
 			{
-				textField_8 = new JTextField();
-				textField_8.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_8.setColumns(10);
-				GridBagConstraints gbc_textField_8 = new GridBagConstraints();
-				gbc_textField_8.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_8.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_8.gridx = 1;
-				gbc_textField_8.gridy = 7;
-				contentPane.add(textField_8, gbc_textField_8);
+				txtCompany_name = new JTextField();
+				txtCompany_name.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtCompany_name.setColumns(10);
+				GridBagConstraints gbc_txtCompany_name = new GridBagConstraints();
+				gbc_txtCompany_name.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtCompany_name.insets = new Insets(0, 0, 5, 5);
+				gbc_txtCompany_name.gridx = 1;
+				gbc_txtCompany_name.gridy = 7;
+				contentPane.add(txtCompany_name, gbc_txtCompany_name);
 			}
 			{
-				JLabel lblStreet = new JLabel("Street :");
-				lblStreet.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblStreet = new GridBagConstraints();
-				gbc_lblStreet.anchor = GridBagConstraints.EAST;
-				gbc_lblStreet.insets = new Insets(0, 0, 5, 5);
-				gbc_lblStreet.gridx = 0;
-				gbc_lblStreet.gridy = 8;
-				contentPane.add(lblStreet, gbc_lblStreet);
+				JLabel lblLocation_street = new JLabel("Street :");
+				lblLocation_street.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblLocation_street = new GridBagConstraints();
+				gbc_lblLocation_street.anchor = GridBagConstraints.EAST;
+				gbc_lblLocation_street.insets = new Insets(0, 0, 5, 5);
+				gbc_lblLocation_street.gridx = 0;
+				gbc_lblLocation_street.gridy = 8;
+				contentPane.add(lblLocation_street, gbc_lblLocation_street);
 			}
 			{
-				textField_9 = new JTextField();
-				textField_9.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_9.setColumns(10);
-				GridBagConstraints gbc_textField_9 = new GridBagConstraints();
-				gbc_textField_9.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_9.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_9.gridx = 1;
-				gbc_textField_9.gridy = 8;
-				contentPane.add(textField_9, gbc_textField_9);
+				txtLocation_street = new JTextField();
+				txtLocation_street.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtLocation_street.setColumns(10);
+				GridBagConstraints gbc_txtLocation_street = new GridBagConstraints();
+				gbc_txtLocation_street.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtLocation_street.insets = new Insets(0, 0, 5, 5);
+				gbc_txtLocation_street.gridx = 1;
+				gbc_txtLocation_street.gridy = 8;
+				contentPane.add(txtLocation_street, gbc_txtLocation_street);
 			}
 			{
-				JLabel lblCompanyName_2 = new JLabel("City :");
-				lblCompanyName_2.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_2 = new GridBagConstraints();
-				gbc_lblCompanyName_2.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_2.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_2.gridx = 2;
-				gbc_lblCompanyName_2.gridy = 8;
-				contentPane.add(lblCompanyName_2, gbc_lblCompanyName_2);
+				JLabel lblLocation_city = new JLabel("City :");
+				lblLocation_city.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblLocation_city = new GridBagConstraints();
+				gbc_lblLocation_city.anchor = GridBagConstraints.EAST;
+				gbc_lblLocation_city.insets = new Insets(0, 0, 5, 5);
+				gbc_lblLocation_city.gridx = 2;
+				gbc_lblLocation_city.gridy = 8;
+				contentPane.add(lblLocation_city, gbc_lblLocation_city);
 			}
 			{
-				textField_10 = new JTextField();
-				textField_10.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_10.setColumns(10);
-				GridBagConstraints gbc_textField_10 = new GridBagConstraints();
-				gbc_textField_10.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_10.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_10.gridx = 3;
-				gbc_textField_10.gridy = 8;
-				contentPane.add(textField_10, gbc_textField_10);
+				txtLocation_city = new JTextField();
+				txtLocation_city.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtLocation_city.setColumns(10);
+				GridBagConstraints gbc_txtLocation_city = new GridBagConstraints();
+				gbc_txtLocation_city.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtLocation_city.insets = new Insets(0, 0, 5, 0);
+				gbc_txtLocation_city.gridx = 3;
+				gbc_txtLocation_city.gridy = 8;
+				contentPane.add(txtLocation_city, gbc_txtLocation_city);
 			}
 			{
-				JLabel lblCompanyName_3 = new JLabel("District :");
-				lblCompanyName_3.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_3 = new GridBagConstraints();
-				gbc_lblCompanyName_3.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_3.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_3.gridx = 0;
-				gbc_lblCompanyName_3.gridy = 9;
-				contentPane.add(lblCompanyName_3, gbc_lblCompanyName_3);
+				JLabel lblLocation_district = new JLabel("District :");
+				lblLocation_district.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblLocation_district = new GridBagConstraints();
+				gbc_lblLocation_district.anchor = GridBagConstraints.EAST;
+				gbc_lblLocation_district.insets = new Insets(0, 0, 5, 5);
+				gbc_lblLocation_district.gridx = 0;
+				gbc_lblLocation_district.gridy = 9;
+				contentPane.add(lblLocation_district, gbc_lblLocation_district);
 			}
 			{
-				textField_11 = new JTextField();
-				textField_11.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_11.setColumns(10);
-				GridBagConstraints gbc_textField_11 = new GridBagConstraints();
-				gbc_textField_11.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_11.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_11.gridx = 1;
-				gbc_textField_11.gridy = 9;
-				contentPane.add(textField_11, gbc_textField_11);
+				txtLocation_district = new JTextField();
+				txtLocation_district.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtLocation_district.setColumns(10);
+				GridBagConstraints gbc_txtLocation_district = new GridBagConstraints();
+				gbc_txtLocation_district.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtLocation_district.insets = new Insets(0, 0, 5, 5);
+				gbc_txtLocation_district.gridx = 1;
+				gbc_txtLocation_district.gridy = 9;
+				contentPane.add(txtLocation_district, gbc_txtLocation_district);
 			}
 			{
-				JLabel lblCompanyName_6 = new JLabel("Country :");
-				lblCompanyName_6.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_6 = new GridBagConstraints();
-				gbc_lblCompanyName_6.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_6.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_6.gridx = 2;
-				gbc_lblCompanyName_6.gridy = 9;
-				contentPane.add(lblCompanyName_6, gbc_lblCompanyName_6);
+				JLabel lblLocation_country = new JLabel("Country :");
+				lblLocation_country.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblLocation_country = new GridBagConstraints();
+				gbc_lblLocation_country.anchor = GridBagConstraints.EAST;
+				gbc_lblLocation_country.insets = new Insets(0, 0, 5, 5);
+				gbc_lblLocation_country.gridx = 2;
+				gbc_lblLocation_country.gridy = 9;
+				contentPane.add(lblLocation_country, gbc_lblLocation_country);
 			}
 			{
-				textField_12 = new JTextField();
-				textField_12.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_12.setColumns(10);
-				GridBagConstraints gbc_textField_12 = new GridBagConstraints();
-				gbc_textField_12.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_12.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_12.gridx = 3;
-				gbc_textField_12.gridy = 9;
-				contentPane.add(textField_12, gbc_textField_12);
+				txtLocation_country = new JTextField();
+				txtLocation_country.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtLocation_country.setColumns(10);
+				GridBagConstraints gbc_txtLocation_country = new GridBagConstraints();
+				gbc_txtLocation_country.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtLocation_country.insets = new Insets(0, 0, 5, 0);
+				gbc_txtLocation_country.gridx = 3;
+				gbc_txtLocation_country.gridy = 9;
+				contentPane.add(txtLocation_country, gbc_txtLocation_country);
 			}
 			{
-				JLabel lblCompanyName_4 = new JLabel("Postal Code :");
-				lblCompanyName_4.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_4 = new GridBagConstraints();
-				gbc_lblCompanyName_4.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_4.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_4.gridx = 0;
-				gbc_lblCompanyName_4.gridy = 10;
-				contentPane.add(lblCompanyName_4, gbc_lblCompanyName_4);
+				JLabel lblPostal_code = new JLabel("Postal Code :");
+				lblPostal_code.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblPostal_code = new GridBagConstraints();
+				gbc_lblPostal_code.anchor = GridBagConstraints.EAST;
+				gbc_lblPostal_code.insets = new Insets(0, 0, 5, 5);
+				gbc_lblPostal_code.gridx = 0;
+				gbc_lblPostal_code.gridy = 10;
+				contentPane.add(lblPostal_code, gbc_lblPostal_code);
 			}
 			{
-				textField_13 = new JTextField();
-				textField_13.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_13.setColumns(10);
-				GridBagConstraints gbc_textField_13 = new GridBagConstraints();
-				gbc_textField_13.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_13.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_13.gridx = 1;
-				gbc_textField_13.gridy = 10;
-				contentPane.add(textField_13, gbc_textField_13);
+				txtPostal_code = new JTextField();
+				txtPostal_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtPostal_code.setColumns(10);
+				GridBagConstraints gbc_txtPostal_code = new GridBagConstraints();
+				gbc_txtPostal_code.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtPostal_code.insets = new Insets(0, 0, 5, 5);
+				gbc_txtPostal_code.gridx = 1;
+				gbc_txtPostal_code.gridy = 10;
+				contentPane.add(txtPostal_code, gbc_txtPostal_code);
 			}
 			{
-				JLabel lblCompanyName_7 = new JLabel("Telephone Number :");
-				lblCompanyName_7.setBackground(Color.WHITE);
-				lblCompanyName_7.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_7 = new GridBagConstraints();
-				gbc_lblCompanyName_7.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_7.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_7.gridx = 2;
-				gbc_lblCompanyName_7.gridy = 10;
-				contentPane.add(lblCompanyName_7, gbc_lblCompanyName_7);
+				JLabel lblTelephone_number = new JLabel("Telephone Number :");
+				lblTelephone_number.setBackground(Color.WHITE);
+				lblTelephone_number.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblTelephone_number = new GridBagConstraints();
+				gbc_lblTelephone_number.anchor = GridBagConstraints.EAST;
+				gbc_lblTelephone_number.insets = new Insets(0, 0, 5, 5);
+				gbc_lblTelephone_number.gridx = 2;
+				gbc_lblTelephone_number.gridy = 10;
+				contentPane.add(lblTelephone_number, gbc_lblTelephone_number);
 			}
 			{
-				textField_14 = new JTextField();
-				textField_14.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_14.setColumns(10);
-				GridBagConstraints gbc_textField_14 = new GridBagConstraints();
-				gbc_textField_14.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_14.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_14.gridx = 3;
-				gbc_textField_14.gridy = 10;
-				contentPane.add(textField_14, gbc_textField_14);
+				txtTelephone_number = new JTextField();
+				txtTelephone_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtTelephone_number.setColumns(10);
+				GridBagConstraints gbc_txtTelephone_number = new GridBagConstraints();
+				gbc_txtTelephone_number.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtTelephone_number.insets = new Insets(0, 0, 5, 0);
+				gbc_txtTelephone_number.gridx = 3;
+				gbc_txtTelephone_number.gridy = 10;
+				contentPane.add(txtTelephone_number, gbc_txtTelephone_number);
 			}
 			{
-				JLabel lblCompanyName_5 = new JLabel("Business Reg. Number :");
-				lblCompanyName_5.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_5 = new GridBagConstraints();
-				gbc_lblCompanyName_5.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_5.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_5.gridx = 0;
-				gbc_lblCompanyName_5.gridy = 11;
-				contentPane.add(lblCompanyName_5, gbc_lblCompanyName_5);
+				JLabel lblBusiness_reg_number = new JLabel("Business Reg. Number :");
+				lblBusiness_reg_number.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblBusiness_reg_number = new GridBagConstraints();
+				gbc_lblBusiness_reg_number.anchor = GridBagConstraints.EAST;
+				gbc_lblBusiness_reg_number.insets = new Insets(0, 0, 5, 5);
+				gbc_lblBusiness_reg_number.gridx = 0;
+				gbc_lblBusiness_reg_number.gridy = 11;
+				contentPane.add(lblBusiness_reg_number, gbc_lblBusiness_reg_number);
 			}
 			{
-				textField_15 = new JTextField();
-				textField_15.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_15.setColumns(10);
-				GridBagConstraints gbc_textField_15 = new GridBagConstraints();
-				gbc_textField_15.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_15.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_15.gridx = 1;
-				gbc_textField_15.gridy = 11;
-				contentPane.add(textField_15, gbc_textField_15);
+				txtBusiness_reg_number = new JTextField();
+				txtBusiness_reg_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtBusiness_reg_number.setColumns(10);
+				GridBagConstraints gbc_txtBusiness_reg_number = new GridBagConstraints();
+				gbc_txtBusiness_reg_number.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtBusiness_reg_number.insets = new Insets(0, 0, 5, 5);
+				gbc_txtBusiness_reg_number.gridx = 1;
+				gbc_txtBusiness_reg_number.gridy = 11;
+				contentPane.add(txtBusiness_reg_number, gbc_txtBusiness_reg_number);
 			}
 			{
-				JLabel lblCompanyName_8 = new JLabel("Fax Number :");
-				lblCompanyName_8.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_8 = new GridBagConstraints();
-				gbc_lblCompanyName_8.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_8.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_8.gridx = 2;
-				gbc_lblCompanyName_8.gridy = 11;
-				contentPane.add(lblCompanyName_8, gbc_lblCompanyName_8);
+				JLabel lblFax_number = new JLabel("Fax Number :");
+				lblFax_number.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblFax_number = new GridBagConstraints();
+				gbc_lblFax_number.anchor = GridBagConstraints.EAST;
+				gbc_lblFax_number.insets = new Insets(0, 0, 5, 5);
+				gbc_lblFax_number.gridx = 2;
+				gbc_lblFax_number.gridy = 11;
+				contentPane.add(lblFax_number, gbc_lblFax_number);
 			}
 			{
-				textField_16 = new JTextField();
-				textField_16.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_16.setColumns(10);
-				GridBagConstraints gbc_textField_16 = new GridBagConstraints();
-				gbc_textField_16.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_16.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_16.gridx = 3;
-				gbc_textField_16.gridy = 11;
-				contentPane.add(textField_16, gbc_textField_16);
+				txtFax_number = new JTextField();
+				txtFax_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtFax_number.setColumns(10);
+				GridBagConstraints gbc_txtFax_number = new GridBagConstraints();
+				gbc_txtFax_number.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtFax_number.insets = new Insets(0, 0, 5, 0);
+				gbc_txtFax_number.gridx = 3;
+				gbc_txtFax_number.gridy = 11;
+				contentPane.add(txtFax_number, gbc_txtFax_number);
 			}
 			{
 				JLabel lblSubheader_2 = new JLabel("PAYMENT DATA");
@@ -481,110 +481,110 @@ public class InputAddForm extends JDialog {
 				contentPane.add(lblSubheader_2, gbc_lblSubheader_2);
 			}
 			{
-				JLabel lblCompanyName_1 = new JLabel("Region Bank Code :");
-				lblCompanyName_1.setForeground(Color.RED);
-				lblCompanyName_1.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
-				GridBagConstraints gbc_lblCompanyName_1 = new GridBagConstraints();
-				gbc_lblCompanyName_1.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_1.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_1.gridx = 0;
-				gbc_lblCompanyName_1.gridy = 13;
-				contentPane.add(lblCompanyName_1, gbc_lblCompanyName_1);
+				JLabel lblRegion_bank_code = new JLabel("Region Bank Code :");
+				lblRegion_bank_code.setForeground(Color.RED);
+				lblRegion_bank_code.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
+				GridBagConstraints gbc_lblRegion_bank_code = new GridBagConstraints();
+				gbc_lblRegion_bank_code.anchor = GridBagConstraints.EAST;
+				gbc_lblRegion_bank_code.insets = new Insets(0, 0, 5, 5);
+				gbc_lblRegion_bank_code.gridx = 0;
+				gbc_lblRegion_bank_code.gridy = 13;
+				contentPane.add(lblRegion_bank_code, gbc_lblRegion_bank_code);
 			}
 			{
-				textField_17 = new JTextField();
-				textField_17.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_17.setColumns(10);
-				GridBagConstraints gbc_textField_17 = new GridBagConstraints();
-				gbc_textField_17.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_17.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_17.gridx = 1;
-				gbc_textField_17.gridy = 13;
-				contentPane.add(textField_17, gbc_textField_17);
+				txtRegion_bank_code = new JTextField();
+				txtRegion_bank_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtRegion_bank_code.setColumns(10);
+				GridBagConstraints gbc_txtRegion_bank_code = new GridBagConstraints();
+				gbc_txtRegion_bank_code.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtRegion_bank_code.insets = new Insets(0, 0, 5, 5);
+				gbc_txtRegion_bank_code.gridx = 1;
+				gbc_txtRegion_bank_code.gridy = 13;
+				contentPane.add(txtRegion_bank_code, gbc_txtRegion_bank_code);
 			}
 			{
-				JLabel lblCompanyName_9 = new JLabel("Bank Name :");
-				lblCompanyName_9.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_9 = new GridBagConstraints();
-				gbc_lblCompanyName_9.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_9.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_9.gridx = 2;
-				gbc_lblCompanyName_9.gridy = 13;
-				contentPane.add(lblCompanyName_9, gbc_lblCompanyName_9);
+				JLabel lblBank_name = new JLabel("Bank Name :");
+				lblBank_name.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblBank_name = new GridBagConstraints();
+				gbc_lblBank_name.anchor = GridBagConstraints.EAST;
+				gbc_lblBank_name.insets = new Insets(0, 0, 5, 5);
+				gbc_lblBank_name.gridx = 2;
+				gbc_lblBank_name.gridy = 13;
+				contentPane.add(lblBank_name, gbc_lblBank_name);
 			}
 			{
-				textField_18 = new JTextField();
-				textField_18.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_18.setColumns(10);
-				GridBagConstraints gbc_textField_18 = new GridBagConstraints();
-				gbc_textField_18.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_18.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_18.gridx = 3;
-				gbc_textField_18.gridy = 13;
-				contentPane.add(textField_18, gbc_textField_18);
+				txtBank_name = new JTextField();
+				txtBank_name.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtBank_name.setColumns(10);
+				GridBagConstraints gbc_txtBank_name = new GridBagConstraints();
+				gbc_txtBank_name.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtBank_name.insets = new Insets(0, 0, 5, 0);
+				gbc_txtBank_name.gridx = 3;
+				gbc_txtBank_name.gridy = 13;
+				contentPane.add(txtBank_name, gbc_txtBank_name);
 			}
 			{
-				JLabel lblCompanyName_10 = new JLabel("Payment Code :");
-				lblCompanyName_10.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_10 = new GridBagConstraints();
-				gbc_lblCompanyName_10.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_10.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_10.gridx = 0;
-				gbc_lblCompanyName_10.gridy = 14;
-				contentPane.add(lblCompanyName_10, gbc_lblCompanyName_10);
+				JLabel lblPayment_code = new JLabel("Payment Code :");
+				lblPayment_code.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblPayment_code = new GridBagConstraints();
+				gbc_lblPayment_code.anchor = GridBagConstraints.EAST;
+				gbc_lblPayment_code.insets = new Insets(0, 0, 5, 5);
+				gbc_lblPayment_code.gridx = 0;
+				gbc_lblPayment_code.gridy = 14;
+				contentPane.add(lblPayment_code, gbc_lblPayment_code);
 			}
 			{
-				textField_19 = new JTextField();
-				textField_19.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_19.setColumns(10);
-				GridBagConstraints gbc_textField_19 = new GridBagConstraints();
-				gbc_textField_19.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_19.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_19.gridx = 1;
-				gbc_textField_19.gridy = 14;
-				contentPane.add(textField_19, gbc_textField_19);
+				txtPayment_code = new JTextField();
+				txtPayment_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtPayment_code.setColumns(10);
+				GridBagConstraints gbc_txtPayment_code = new GridBagConstraints();
+				gbc_txtPayment_code.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtPayment_code.insets = new Insets(0, 0, 5, 5);
+				gbc_txtPayment_code.gridx = 1;
+				gbc_txtPayment_code.gridy = 14;
+				contentPane.add(txtPayment_code, gbc_txtPayment_code);
 			}
 			{
-				JLabel lblCompanyName_12 = new JLabel("Swift Code / CNAPS :");
-				lblCompanyName_12.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_12 = new GridBagConstraints();
-				gbc_lblCompanyName_12.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_12.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_12.gridx = 2;
-				gbc_lblCompanyName_12.gridy = 14;
-				contentPane.add(lblCompanyName_12, gbc_lblCompanyName_12);
+				JLabel lblSwift_code = new JLabel("Swift Code / CNAPS :");
+				lblSwift_code.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblSwift_code = new GridBagConstraints();
+				gbc_lblSwift_code.anchor = GridBagConstraints.EAST;
+				gbc_lblSwift_code.insets = new Insets(0, 0, 5, 5);
+				gbc_lblSwift_code.gridx = 2;
+				gbc_lblSwift_code.gridy = 14;
+				contentPane.add(lblSwift_code, gbc_lblSwift_code);
 			}
 			{
-				textField_20 = new JTextField();
-				textField_20.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_20.setColumns(10);
-				GridBagConstraints gbc_textField_20 = new GridBagConstraints();
-				gbc_textField_20.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_20.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_20.gridx = 3;
-				gbc_textField_20.gridy = 14;
-				contentPane.add(textField_20, gbc_textField_20);
+				txtSwift_code = new JTextField();
+				txtSwift_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtSwift_code.setColumns(10);
+				GridBagConstraints gbc_txtSwift_code = new GridBagConstraints();
+				gbc_txtSwift_code.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtSwift_code.insets = new Insets(0, 0, 5, 0);
+				gbc_txtSwift_code.gridx = 3;
+				gbc_txtSwift_code.gridy = 14;
+				contentPane.add(txtSwift_code, gbc_txtSwift_code);
 			}
 			{
-				JLabel lblCompanyName_11 = new JLabel("Account Number :");
-				lblCompanyName_11.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_11 = new GridBagConstraints();
-				gbc_lblCompanyName_11.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_11.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_11.gridx = 0;
-				gbc_lblCompanyName_11.gridy = 15;
-				contentPane.add(lblCompanyName_11, gbc_lblCompanyName_11);
+				JLabel lblAccount_number = new JLabel("Account Number :");
+				lblAccount_number.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblAccount_number = new GridBagConstraints();
+				gbc_lblAccount_number.anchor = GridBagConstraints.EAST;
+				gbc_lblAccount_number.insets = new Insets(0, 0, 5, 5);
+				gbc_lblAccount_number.gridx = 0;
+				gbc_lblAccount_number.gridy = 15;
+				contentPane.add(lblAccount_number, gbc_lblAccount_number);
 			}
 			{
-				textField_21 = new JTextField();
-				textField_21.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_21.setColumns(10);
-				GridBagConstraints gbc_textField_21 = new GridBagConstraints();
-				gbc_textField_21.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_21.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_21.gridx = 1;
-				gbc_textField_21.gridy = 15;
-				contentPane.add(textField_21, gbc_textField_21);
+				txtAccount_number = new JTextField();
+				txtAccount_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtAccount_number.setColumns(10);
+				GridBagConstraints gbc_txtAccount_number = new GridBagConstraints();
+				gbc_txtAccount_number.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtAccount_number.insets = new Insets(0, 0, 5, 5);
+				gbc_txtAccount_number.gridx = 1;
+				gbc_txtAccount_number.gridy = 15;
+				contentPane.add(txtAccount_number, gbc_txtAccount_number);
 			}
 			{
 				JLabel lblSubheader_3 = new JLabel("CORRESPONDENCE");
@@ -596,67 +596,67 @@ public class InputAddForm extends JDialog {
 				contentPane.add(lblSubheader_3, gbc_lblSubheader_3);
 			}
 			{
-				JLabel lblCompanyName_14 = new JLabel("Contact Person :");
-				lblCompanyName_14.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_14 = new GridBagConstraints();
-				gbc_lblCompanyName_14.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_14.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_14.gridx = 0;
-				gbc_lblCompanyName_14.gridy = 17;
-				contentPane.add(lblCompanyName_14, gbc_lblCompanyName_14);
+				JLabel lblContact_person = new JLabel("Contact Person :");
+				lblContact_person.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblContact_person = new GridBagConstraints();
+				gbc_lblContact_person.anchor = GridBagConstraints.EAST;
+				gbc_lblContact_person.insets = new Insets(0, 0, 5, 5);
+				gbc_lblContact_person.gridx = 0;
+				gbc_lblContact_person.gridy = 17;
+				contentPane.add(lblContact_person, gbc_lblContact_person);
 			}
 			{
-				textField_22 = new JTextField();
-				textField_22.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_22.setColumns(10);
-				GridBagConstraints gbc_textField_22 = new GridBagConstraints();
-				gbc_textField_22.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_22.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_22.gridx = 1;
-				gbc_textField_22.gridy = 17;
-				contentPane.add(textField_22, gbc_textField_22);
+				txtContact_person = new JTextField();
+				txtContact_person.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtContact_person.setColumns(10);
+				GridBagConstraints gbc_txtContact_person = new GridBagConstraints();
+				gbc_txtContact_person.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtContact_person.insets = new Insets(0, 0, 5, 5);
+				gbc_txtContact_person.gridx = 1;
+				gbc_txtContact_person.gridy = 17;
+				contentPane.add(txtContact_person, gbc_txtContact_person);
 			}
 			{
-				JLabel lblCompanyName_15 = new JLabel("Contact Number :");
-				lblCompanyName_15.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_15 = new GridBagConstraints();
-				gbc_lblCompanyName_15.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_15.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_15.gridx = 2;
-				gbc_lblCompanyName_15.gridy = 17;
-				contentPane.add(lblCompanyName_15, gbc_lblCompanyName_15);
+				JLabel lblContact_number = new JLabel("Contact Number :");
+				lblContact_number.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblContact_number = new GridBagConstraints();
+				gbc_lblContact_number.anchor = GridBagConstraints.EAST;
+				gbc_lblContact_number.insets = new Insets(0, 0, 5, 5);
+				gbc_lblContact_number.gridx = 2;
+				gbc_lblContact_number.gridy = 17;
+				contentPane.add(lblContact_number, gbc_lblContact_number);
 			}
 			{
-				textField_23 = new JTextField();
-				textField_23.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_23.setColumns(10);
-				GridBagConstraints gbc_textField_23 = new GridBagConstraints();
-				gbc_textField_23.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_23.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_23.gridx = 3;
-				gbc_textField_23.gridy = 17;
-				contentPane.add(textField_23, gbc_textField_23);
+				txtContact_number = new JTextField();
+				txtContact_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtContact_number.setColumns(10);
+				GridBagConstraints gbc_txtContact_number = new GridBagConstraints();
+				gbc_txtContact_number.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtContact_number.insets = new Insets(0, 0, 5, 0);
+				gbc_txtContact_number.gridx = 3;
+				gbc_txtContact_number.gridy = 17;
+				contentPane.add(txtContact_number, gbc_txtContact_number);
 			}
 			{
-				JLabel lblCompanyName_16 = new JLabel("E-mail Address");
-				lblCompanyName_16.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_16 = new GridBagConstraints();
-				gbc_lblCompanyName_16.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_16.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_16.gridx = 0;
-				gbc_lblCompanyName_16.gridy = 18;
-				contentPane.add(lblCompanyName_16, gbc_lblCompanyName_16);
+				JLabel lblEmail_address = new JLabel("E-mail Address");
+				lblEmail_address.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblEmail_address = new GridBagConstraints();
+				gbc_lblEmail_address.anchor = GridBagConstraints.EAST;
+				gbc_lblEmail_address.insets = new Insets(0, 0, 5, 5);
+				gbc_lblEmail_address.gridx = 0;
+				gbc_lblEmail_address.gridy = 18;
+				contentPane.add(lblEmail_address, gbc_lblEmail_address);
 			}
 			{
-				textField_24 = new JTextField();
-				textField_24.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_24.setColumns(10);
-				GridBagConstraints gbc_textField_24 = new GridBagConstraints();
-				gbc_textField_24.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_24.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_24.gridx = 1;
-				gbc_textField_24.gridy = 18;
-				contentPane.add(textField_24, gbc_textField_24);
+				txtEmail_address = new JTextField();
+				txtEmail_address.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtEmail_address.setColumns(10);
+				GridBagConstraints gbc_txtEmail_address = new GridBagConstraints();
+				gbc_txtEmail_address.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtEmail_address.insets = new Insets(0, 0, 5, 5);
+				gbc_txtEmail_address.gridx = 1;
+				gbc_txtEmail_address.gridy = 18;
+				contentPane.add(txtEmail_address, gbc_txtEmail_address);
 			}
 			{
 				JLabel lblSubheader_4 = new JLabel("PURCHASING INFORMATION");
@@ -668,67 +668,67 @@ public class InputAddForm extends JDialog {
 				contentPane.add(lblSubheader_4, gbc_lblSubheader_4);
 			}
 			{
-				JLabel lblCompanyName_17 = new JLabel("Order Currency :");
-				lblCompanyName_17.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_17 = new GridBagConstraints();
-				gbc_lblCompanyName_17.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_17.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_17.gridx = 0;
-				gbc_lblCompanyName_17.gridy = 20;
-				contentPane.add(lblCompanyName_17, gbc_lblCompanyName_17);
+				JLabel lblOrder_currency = new JLabel("Order Currency :");
+				lblOrder_currency.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblOrder_currency = new GridBagConstraints();
+				gbc_lblOrder_currency.anchor = GridBagConstraints.EAST;
+				gbc_lblOrder_currency.insets = new Insets(0, 0, 5, 5);
+				gbc_lblOrder_currency.gridx = 0;
+				gbc_lblOrder_currency.gridy = 20;
+				contentPane.add(lblOrder_currency, gbc_lblOrder_currency);
 			}
 			{
-				textField_25 = new JTextField();
-				textField_25.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_25.setColumns(10);
-				GridBagConstraints gbc_textField_25 = new GridBagConstraints();
-				gbc_textField_25.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_25.insets = new Insets(0, 0, 5, 5);
-				gbc_textField_25.gridx = 1;
-				gbc_textField_25.gridy = 20;
-				contentPane.add(textField_25, gbc_textField_25);
+				txtOrder_currency = new JTextField();
+				txtOrder_currency.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtOrder_currency.setColumns(10);
+				GridBagConstraints gbc_txtOrder_currency = new GridBagConstraints();
+				gbc_txtOrder_currency.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtOrder_currency.insets = new Insets(0, 0, 5, 5);
+				gbc_txtOrder_currency.gridx = 1;
+				gbc_txtOrder_currency.gridy = 20;
+				contentPane.add(txtOrder_currency, gbc_txtOrder_currency);
 			}
 			{
-				JLabel lblCompanyName_19 = new JLabel("Port of Lading :");
-				lblCompanyName_19.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_19 = new GridBagConstraints();
-				gbc_lblCompanyName_19.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_19.insets = new Insets(0, 0, 5, 5);
-				gbc_lblCompanyName_19.gridx = 2;
-				gbc_lblCompanyName_19.gridy = 20;
-				contentPane.add(lblCompanyName_19, gbc_lblCompanyName_19);
+				JLabel lblPort_of_lading = new JLabel("Port of Lading :");
+				lblPort_of_lading.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblPort_of_lading = new GridBagConstraints();
+				gbc_lblPort_of_lading.anchor = GridBagConstraints.EAST;
+				gbc_lblPort_of_lading.insets = new Insets(0, 0, 5, 5);
+				gbc_lblPort_of_lading.gridx = 2;
+				gbc_lblPort_of_lading.gridy = 20;
+				contentPane.add(lblPort_of_lading, gbc_lblPort_of_lading);
 			}
 			{
-				textField_26 = new JTextField();
-				textField_26.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_26.setColumns(10);
-				GridBagConstraints gbc_textField_26 = new GridBagConstraints();
-				gbc_textField_26.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_26.insets = new Insets(0, 0, 5, 0);
-				gbc_textField_26.gridx = 3;
-				gbc_textField_26.gridy = 20;
-				contentPane.add(textField_26, gbc_textField_26);
+				txtPort_of_lading = new JTextField();
+				txtPort_of_lading.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtPort_of_lading.setColumns(10);
+				GridBagConstraints gbc_txtPort_of_lading = new GridBagConstraints();
+				gbc_txtPort_of_lading.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtPort_of_lading.insets = new Insets(0, 0, 5, 0);
+				gbc_txtPort_of_lading.gridx = 3;
+				gbc_txtPort_of_lading.gridy = 20;
+				contentPane.add(txtPort_of_lading, gbc_txtPort_of_lading);
 			}
 			{
-				JLabel lblCompanyName_18 = new JLabel("Incoterms :");
-				lblCompanyName_18.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
-				GridBagConstraints gbc_lblCompanyName_18 = new GridBagConstraints();
-				gbc_lblCompanyName_18.anchor = GridBagConstraints.EAST;
-				gbc_lblCompanyName_18.insets = new Insets(0, 0, 0, 5);
-				gbc_lblCompanyName_18.gridx = 0;
-				gbc_lblCompanyName_18.gridy = 21;
-				contentPane.add(lblCompanyName_18, gbc_lblCompanyName_18);
+				JLabel lblIncoterms = new JLabel("Incoterms :");
+				lblIncoterms.setFont(new Font("Helvetica LT Std Light", Font.PLAIN, 15));
+				GridBagConstraints gbc_lblIncoterms = new GridBagConstraints();
+				gbc_lblIncoterms.anchor = GridBagConstraints.EAST;
+				gbc_lblIncoterms.insets = new Insets(0, 0, 0, 5);
+				gbc_lblIncoterms.gridx = 0;
+				gbc_lblIncoterms.gridy = 21;
+				contentPane.add(lblIncoterms, gbc_lblIncoterms);
 			}
 			{
-				textField_27 = new JTextField();
-				textField_27.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				textField_27.setColumns(10);
-				GridBagConstraints gbc_textField_27 = new GridBagConstraints();
-				gbc_textField_27.fill = GridBagConstraints.HORIZONTAL;
-				gbc_textField_27.insets = new Insets(0, 0, 0, 5);
-				gbc_textField_27.gridx = 1;
-				gbc_textField_27.gridy = 21;
-				contentPane.add(textField_27, gbc_textField_27);
+				txtIncoterms = new JTextField();
+				txtIncoterms.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				txtIncoterms.setColumns(10);
+				GridBagConstraints gbc_txtIncoterms = new GridBagConstraints();
+				gbc_txtIncoterms.fill = GridBagConstraints.HORIZONTAL;
+				gbc_txtIncoterms.insets = new Insets(0, 0, 0, 5);
+				gbc_txtIncoterms.gridx = 1;
+				gbc_txtIncoterms.gridy = 21;
+				contentPane.add(txtIncoterms, gbc_txtIncoterms);
 			}
 		}
 		{
