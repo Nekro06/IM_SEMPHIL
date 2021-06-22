@@ -1,5 +1,7 @@
 package com.semphil.main;
 
+import javax.swing.JOptionPane;
+
 import com.mysql.cj.jdbc.MysqlDataSource;
 import com.semphil.repo.*;
 import com.semphil.ui.MainUI;
@@ -9,6 +11,16 @@ public class SEMPHILMainApp {
 	public static void main(String[] args) {
 		
 		MysqlDataSource dataSource = new MysqlDataSource();
+		
+		// Database Connection
+		try {
+			dataSource.setUrl("jdbc:mysql://localhost:3306/semphil");
+			dataSource.setUser("root");
+			dataSource.setPassword("aidenflynn");
+		}catch(Exception objEx){
+			JOptionPane.showMessageDialog(null, "Database Connection Unsuccessful", "ERROR!", JOptionPane.WARNING_MESSAGE);
+			objEx.printStackTrace();
+		}
 		
 		// Declaration of All Repositories as Objects and Passing the "dataSource" as Argument to their Constructor
 		DepartmentRepo departmentRepo = new DepartmentRepo(dataSource);

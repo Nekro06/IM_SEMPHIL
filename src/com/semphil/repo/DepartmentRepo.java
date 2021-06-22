@@ -19,7 +19,7 @@ public class DepartmentRepo {
 		try(
 			Connection connection = dataSource.getConnection();
 			PreparedStatement insertStatement =
-					connection.prepareStatement("INSERT INTO department VALUES (?, ?)")) {
+					connection.prepareStatement("INSERT IGNORE INTO department VALUES (?, ?)")) {
 			
 			// Use the accessors from the bean to retrieve the data
 			insertStatement.setString(1, department.getDept_id());

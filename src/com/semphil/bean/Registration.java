@@ -3,7 +3,9 @@ package com.semphil.bean;
 public class Registration {
 	
 	private String registration_code;
+	private String dept_id;
 	private Department department; //dept_id
+	private String company_id;
 	private Vendor vendor; //company_id
 	private String product_services;
 	private String registration_purpose;
@@ -11,6 +13,7 @@ public class Registration {
 	private String contact_person;
 	private String contact_number;
 	private String email_address;
+	private String payment_id;
 	private Payment payment; //payment_id
 	private String order_currency;
 	private String incoterms;
@@ -34,20 +37,21 @@ public class Registration {
 		this.incoterms = incoterms;
 		this.port_of_lading = port_of_lading;
 	}
-	
-	public Registration(Department department, Vendor vendor, String product_services,
+
+	public Registration(String registration_code, String dept_id, String company_id, String product_services,
 			String registration_purpose, String registration_date, String contact_person, String contact_number,
-			String email_address, Payment payment, String order_currency, String incoterms, String port_of_lading) {
+			String email_address, String payment_id, String order_currency, String incoterms, String port_of_lading) {
 		super();
-		this.department = department;
-		this.vendor = vendor;
+		this.registration_code = registration_code;
+		this.dept_id = dept_id;
+		this.company_id = company_id;
 		this.product_services = product_services;
 		this.registration_purpose = registration_purpose;
 		this.registration_date = registration_date;
 		this.contact_person = contact_person;
 		this.contact_number = contact_number;
 		this.email_address = email_address;
-		this.payment = payment;
+		this.payment_id = payment_id;
 		this.order_currency = order_currency;
 		this.incoterms = incoterms;
 		this.port_of_lading = port_of_lading;
@@ -155,6 +159,30 @@ public class Registration {
 	
 	public void setPort_of_lading(String port_of_lading) {
 		this.port_of_lading = port_of_lading;
+	}
+
+	public String getDept_id() {
+		return dept_id;
+	}
+
+	public void setDept_id(String dept_id) {
+		this.dept_id = dept_id;
+	}
+
+	public String getCompany_id() {
+		return company_id;
+	}
+
+	public void setCompany_id(String company_id) {
+		this.company_id = company_id;
+	}
+
+	public String getPayment_id() {
+		return payment_id;
+	}
+
+	public void setPayment_id(String payment_id) {
+		this.payment_id = payment_id;
 	}
 
 }

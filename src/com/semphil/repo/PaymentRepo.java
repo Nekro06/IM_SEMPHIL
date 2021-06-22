@@ -19,12 +19,12 @@ private DataSource dataSource;
 		try(
 			Connection connection = dataSource.getConnection();
 			PreparedStatement insertStatement =
-					connection.prepareStatement("INSERT INTO payment VALUES (?, ?)")) {
+					connection.prepareStatement("INSERT IGNORE INTO payment VALUES (?, ?, ?, ?, ?)")) {
 			
 			insertStatement.setString(1, payment.getPayment_id());
-			insertStatement.setString(2, payment.getVendor().getCompany_id());
+			insertStatement.setString(2, payment.getCompany_id());
 			insertStatement.setString(3, payment.getPayment_code());
-			insertStatement.setString(4, payment.getBank().getRegion_bank_code());
+			insertStatement.setString(4, payment.getRegion_bank_code());
 			insertStatement.setString(5, payment.getAccount_number());
 			
 			insertStatement.execute();
