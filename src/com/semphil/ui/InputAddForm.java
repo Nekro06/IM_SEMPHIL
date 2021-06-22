@@ -9,13 +9,21 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
 import java.awt.Dimension;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
+import com.semphil.bean.*;
+import com.semphil.repo.*;
+
+@SuppressWarnings("serial")
 public class InputAddForm extends JDialog {
 	private JTextField txtDept_id;
 	private JTextField txtCompany_id;
@@ -82,6 +90,7 @@ public class InputAddForm extends JDialog {
 			contentPane.setLayout(gbl_contentPane);
 			{
 				JLabel lblHeader_1 = new JLabel("To be filled up by SEMPHIL - Requesting Department");
+				lblHeader_1.setForeground(new Color(75, 0, 130));
 				lblHeader_1.setFont(new Font("Helvetica LT Std Cond", Font.BOLD | Font.ITALIC, 15));
 				GridBagConstraints gbc_lblHeader_1 = new GridBagConstraints();
 				gbc_lblHeader_1.anchor = GridBagConstraints.WEST;
@@ -264,6 +273,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				JLabel lblHeader_2 = new JLabel("To be filled up by VENDOR / CUSTOMER");
+				lblHeader_2.setForeground(new Color(85, 107, 47));
 				lblHeader_2.setFont(new Font("Helvetica LT Std Cond", Font.BOLD | Font.ITALIC, 15));
 				GridBagConstraints gbc_lblHeader_2 = new GridBagConstraints();
 				gbc_lblHeader_2.anchor = GridBagConstraints.WEST;
@@ -271,6 +281,16 @@ public class InputAddForm extends JDialog {
 				gbc_lblHeader_2.gridx = 1;
 				gbc_lblHeader_2.gridy = 5;
 				contentPane.add(lblHeader_2, gbc_lblHeader_2);
+			}
+			{
+				JLabel lblRegistration_date = new JLabel("(in YYYY-MM-DD format)");
+				lblRegistration_date.setFont(new Font("Helvetica LT Std", Font.ITALIC, 12));
+				GridBagConstraints gbc_lblRegistration_date = new GridBagConstraints();
+				gbc_lblRegistration_date.anchor = GridBagConstraints.WEST;
+				gbc_lblRegistration_date.insets = new Insets(0, 0, 5, 0);
+				gbc_lblRegistration_date.gridx = 3;
+				gbc_lblRegistration_date.gridy = 5;
+				contentPane.add(lblRegistration_date, gbc_lblRegistration_date);
 			}
 			{
 				JLabel lblSubheader_1 = new JLabel("VENDOR / CUSTOMER INFORMATION");
@@ -742,6 +762,67 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				JButton btnSave = new JButton("SAVE");
+				btnSave.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						
+						Department department =
+								new Department(txtDept_id.getText(),
+												txtRequesting_dept.getText());
+						
+						inputMgmtPanel.departmentRepo.addDepartment(department);
+						
+						Vendor vendor =
+								new Vendor(txtCompany_id.getText(),
+											txtCompany_name.getText(),
+											txtLocation_street.getText(),
+											txtLocation_city.getText(),
+											txtLocation_district.getText(),
+											txtLocation_country.getText(),
+											txtPostal_code.getText(),
+											txtTelephone_number.getText(),
+											txtFax_number.getText(),
+											txtBusiness_reg_number.getText());
+						inputMgmtPanel.vendorRepo.addVendor(vendor);
+						
+						Bank bank =
+								new Bank(txtRegion_bank_code.getText(),
+										txtBank_name.getText(),
+										txtSwift_code.getText());
+						
+						inputMgmtPanel.bankRepo.addBank(bank);
+						
+						Payment payment = 
+								new Payment(txtPayment_id.getText(),
+											txtCompany_id.getText(),
+											txtPayment_code.getText(),
+											txtRegion_bank_code.getText(),
+											txtAccount_number.getText());
+						
+						inputMgmtPanel.paymentRepo.addPayment(payment);
+						
+						Registration registration =
+								new Registration(txtRegistration_code.getText(),
+													txtDept_id.getText(),
+													txtCompany_id.getText(),
+													txtProducts_services.getText(),
+													txtRegistration_purpose.getText(),
+													txtRegistration_date.getText(),
+													txtContact_person.getText(),
+													txtContact_number.getText(),
+													txtEmail_address.getText(),
+													txtPayment_id.getText(),
+													txtOrder_currency.getText(),
+													txtPort_of_lading.getText(),
+													txtIncoterms.getText());
+						
+						inputMgmtPanel.registrationRepo.addRegistration(registration);
+						
+						clearFields();
+						JOptionPane.showMessageDialog(null, "Successfully saved Registration Form to the database!");
+						inputMgmtPanel.inputTableModel.refresh();
+						setVisible(false);
+					}
+				});
 				btnSave.setFont(new Font("Helvetica LT Std", Font.PLAIN, 13));
 				btnSave.setActionCommand("OK");
 				buttonPane.add(btnSave);
@@ -749,11 +830,56 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				JButton btnCancel = new JButton("Cancel");
+				btnCancel.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						int response = JOptionPane.showConfirmDialog(null, 
+				                "Are you sure you want to leave? All inputted details shall be cleared.", "Confirmation",JOptionPane.YES_NO_CANCEL_OPTION);
+						
+						if(response ==  JOptionPane.YES_OPTION) {
+							clearFields();
+							setVisible(false);
+						}
+						else if(response ==  JOptionPane.NO_OPTION || response == JOptionPane.CANCEL_OPTION) {
+							setVisible(true);
+						}
+					}
+				});
 				btnCancel.setFont(new Font("Helvetica LT Std", Font.PLAIN, 13));
 				btnCancel.setActionCommand("Cancel");
 				buttonPane.add(btnCancel);
 			}
 		}
+	}
+	
+	private void clearFields() {
+		txtDept_id.setText("");
+		txtCompany_id.setText("");
+		txtRequesting_dept.setText("");
+		txtRegistration_code.setText("");
+		txtProducts_services.setText("");
+		txtPayment_id.setText("");
+		txtRegistration_purpose.setText("");
+		txtRegistration_date.setText("");
+		txtCompany_name.setText("");
+		txtLocation_street.setText("");
+		txtLocation_city.setText("");
+		txtLocation_district.setText("");
+		txtLocation_country.setText("");
+		txtPostal_code.setText("");
+		txtTelephone_number.setText("");
+		txtBusiness_reg_number.setText("");
+		txtFax_number.setText("");
+		txtRegion_bank_code.setText("");
+		txtBank_name.setText("");
+		txtPayment_code.setText("");
+		txtSwift_code.setText("");
+		txtAccount_number.setText("");
+		txtContact_person.setText("");
+		txtContact_number.setText("");
+		txtEmail_address.setText("");
+		txtOrder_currency.setText("");
+		txtPort_of_lading.setText("");
+		txtIncoterms.setText("");
 	}
 
 }

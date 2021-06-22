@@ -179,18 +179,18 @@ private DataSource dataSource;
 		try(
 			Connection connection = dataSource.getConnection();
 			PreparedStatement insertStatement =
-					connection.prepareStatement("INSERT INTO registration VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")) {
+					connection.prepareStatement("INSERT IGNORE INTO registration VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")) {
 		
 			insertStatement.setString(1, registration.getRegistration_code());
-			insertStatement.setString(2, registration.getDepartment().getDept_id());
-			insertStatement.setString(3, registration.getVendor().getCompany_id());
+			insertStatement.setString(2, registration.getDept_id());
+			insertStatement.setString(3, registration.getCompany_id());
 			insertStatement.setString(4, registration.getProduct_services());
 			insertStatement.setString(5, registration.getRegistration_purpose());
 			insertStatement.setString(6, registration.getRegistration_date());
 			insertStatement.setString(7, registration.getContact_person());
 			insertStatement.setString(8, registration.getContact_number());
 			insertStatement.setString(9, registration.getEmail_address());
-			insertStatement.setString(10, registration.getPayment().getPayment_id());
+			insertStatement.setString(10, registration.getPayment_id());
 			insertStatement.setString(11, registration.getOrder_currency());
 			insertStatement.setString(12, registration.getIncoterms());
 			insertStatement.setString(13, registration.getPort_of_lading());

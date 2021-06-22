@@ -19,7 +19,7 @@ private DataSource dataSource;
 		try(
 			Connection connection = dataSource.getConnection();
 			PreparedStatement insertStatement =
-					connection.prepareStatement("INSERT INTO bank VALUES (?, ?, ?)")) {
+					connection.prepareStatement("INSERT IGNORE INTO bank VALUES (?, ?, ?)")) {
 			
 			insertStatement.setString(1, bank.getRegion_bank_code());
 			insertStatement.setString(2, bank.getBank_name());

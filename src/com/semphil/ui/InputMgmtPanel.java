@@ -89,7 +89,7 @@ public class InputMgmtPanel extends JPanel {
 				String registration_code = (String) inputTableModel.getValueAt(rowIndex, 0);
 				Registration registration = registrationRepo.getByRegistrationCode(registration_code);
 				
-				//inputViewForm.viewDataInDialog(registration);
+				inputViewForm.viewDataInDialog(registration);
 				inputViewForm.setVisible(true);
 			}
 		});
@@ -145,6 +145,7 @@ public class InputMgmtPanel extends JPanel {
 	
 	public void setRegistrationRepo (RegistrationRepo registrationRepo) {
 		this.registrationRepo = registrationRepo;
+		inputTableModel.refresh();
 	}
 
 }
