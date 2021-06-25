@@ -16,7 +16,7 @@ public class SEMPHILMainApp {
 		try {
 			dataSource.setUrl("jdbc:mysql://localhost:3306/semphil");
 			dataSource.setUser("root");
-			dataSource.setPassword("aidenflynn");
+			dataSource.setPassword("Antonio010601");
 		}catch(Exception objEx){
 			JOptionPane.showMessageDialog(null, "Database Connection Unsuccessful", "ERROR!", JOptionPane.WARNING_MESSAGE);
 			objEx.printStackTrace();

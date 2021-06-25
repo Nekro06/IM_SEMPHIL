@@ -807,7 +807,35 @@ public class InputViewForm extends JDialog {
 	}
 	
 	public void viewDataInDialog(Registration registration) {
-		// INSERT CODE HERE
+		
+		txtDept_id.setText(registration.getDepartment().getDept_id());
+		txtCompany_id.setText(registration.getVendor().getCompany_id());
+		txtRequesting_dept.setText(registration.getDepartment().getRequesting_dept());
+		txtRegistration_code.setText(registration.getRegistration_code());
+		txtProducts_services.setText(registration.getProduct_services());
+		txtPayment_id.setText(registration.getPayment().getPayment_id());
+		txtRegistration_purpose.setText(registration.getRegistration_purpose());
+		txtRegistration_date.setText(registration.getRegistration_date());
+		txtCompany_name.setText(registration.getVendor().getCompany_name());
+		txtLocation_street.setText(registration.getVendor().getLocation_street());
+		txtLocation_city.setText(registration.getVendor().getLocation_city());
+		txtLocation_district.setText(registration.getVendor().getLocation_district());
+		txtLocation_country.setText(registration.getVendor().getLocation_country());
+		txtPostal_code.setText(registration.getVendor().getPostal_code());
+		txtTelephone_number.setText(registration.getVendor().getTelephone_number());
+		txtBusiness_reg_number.setText(registration.getVendor().getBusiness_reg_number());
+		txtFax_number.setText(registration.getVendor().getFax_number());
+		txtRegion_bank_code.setText(registration.getPayment().getBank().getRegion_bank_code());
+		txtBank_name.setText(registration.getPayment().getBank().getBank_name());
+		txtPayment_code.setText(registration.getPayment().getPayment_code());
+		txtSwift_code.setText(registration.getPayment().getBank().getSwift_code());
+		txtAccount_number.setText(registration.getPayment().getAccount_number());
+		txtContact_person.setText(registration.getContact_person());
+		txtContact_number.setText(registration.getContact_number());
+		txtEmail_address.setText(registration.getEmail_address());
+		txtOrder_currency.setText(registration.getOrder_currency());
+		txtPort_of_lading.setText(registration.getPort_of_lading());
+		txtIncoterms.setText(registration.getIncoterms());
 	}
 
 }
