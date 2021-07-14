@@ -71,7 +71,7 @@ public class InputViewForm extends JDialog {
 	 * Create the dialog.
 	 */
 	public InputViewForm() {
-		setTitle("NEW VENDOR / CUSTOMER REGISTRATION AGREEMENT FORM");
+		setTitle("VENDOR / CUSTOMER REGISTRATION AGREEMENT FORM");
 		setResizable(false);
 		setMinimumSize(new Dimension(1200, 730));
 		setPreferredSize(new Dimension(1200, 730));
@@ -90,7 +90,7 @@ public class InputViewForm extends JDialog {
 			{
 				JLabel lblHeader_1 = new JLabel("To be filled up by SEMPHIL - Requesting Department");
 				lblHeader_1.setForeground(new Color(75, 0, 130));
-				lblHeader_1.setFont(new Font("Helvetica LT Std Cond", Font.BOLD | Font.ITALIC, 15));
+				lblHeader_1.setFont(new Font("Segoe UI", Font.BOLD | Font.ITALIC, 15));
 				GridBagConstraints gbc_lblHeader_1 = new GridBagConstraints();
 				gbc_lblHeader_1.anchor = GridBagConstraints.WEST;
 				gbc_lblHeader_1.insets = new Insets(0, 0, 5, 5);
@@ -99,7 +99,7 @@ public class InputViewForm extends JDialog {
 				contentPane.add(lblHeader_1, gbc_lblHeader_1);
 			}
 			{
-				JLabel lblDept_id = new JLabel("Department ID :");
+				JLabel lblDept_id = new JLabel("* Department ID :");
 				lblDept_id.setForeground(Color.RED);
 				lblDept_id.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblDept_id = new GridBagConstraints();
@@ -122,7 +122,7 @@ public class InputViewForm extends JDialog {
 				contentPane.add(txtDept_id, gbc_txtDept_id);
 			}
 			{
-				JLabel lblCompany_id = new JLabel("Company ID :");
+				JLabel lblCompany_id = new JLabel("* Company ID :");
 				lblCompany_id.setForeground(Color.RED);
 				lblCompany_id.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblCompany_id = new GridBagConstraints();
@@ -134,6 +134,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtCompany_id = new JTextField();
+				txtCompany_id.setEditable(false);
 				txtCompany_id.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtCompany_id.setColumns(10);
 				GridBagConstraints gbc_txtCompany_id = new GridBagConstraints();
@@ -155,6 +156,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtRequesting_dept = new JTextField();
+				txtRequesting_dept.setEditable(false);
 				txtRequesting_dept.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtRequesting_dept.setColumns(10);
 				GridBagConstraints gbc_txtRequesting_dept = new GridBagConstraints();
@@ -166,7 +168,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				JLabel lblRegistration_code = new JLabel("Registration Code :");
-				lblRegistration_code.setForeground(Color.RED);
+				lblRegistration_code.setForeground(Color.BLUE);
 				lblRegistration_code.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblRegistration_code = new GridBagConstraints();
 				gbc_lblRegistration_code.anchor = GridBagConstraints.EAST;
@@ -177,6 +179,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtRegistration_code = new JTextField();
+				txtRegistration_code.setEditable(false);
 				txtRegistration_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtRegistration_code.setColumns(10);
 				GridBagConstraints gbc_txtRegistration_code = new GridBagConstraints();
@@ -198,6 +201,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtProducts_services = new JTextField();
+				txtProducts_services.setEditable(false);
 				txtProducts_services.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtProducts_services.setColumns(10);
 				GridBagConstraints gbc_txtProducts_services = new GridBagConstraints();
@@ -208,7 +212,7 @@ public class InputViewForm extends JDialog {
 				contentPane.add(txtProducts_services, gbc_txtProducts_services);
 			}
 			{
-				JLabel lblPayment_id = new JLabel("Payment ID :");
+				JLabel lblPayment_id = new JLabel("* Payment ID :");
 				lblPayment_id.setForeground(Color.RED);
 				lblPayment_id.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblPayment_id = new GridBagConstraints();
@@ -220,6 +224,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtPayment_id = new JTextField();
+				txtPayment_id.setEditable(false);
 				txtPayment_id.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtPayment_id.setColumns(10);
 				GridBagConstraints gbc_txtPayment_id = new GridBagConstraints();
@@ -241,6 +246,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtRegistration_purpose = new JTextField();
+				txtRegistration_purpose.setEditable(false);
 				txtRegistration_purpose.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtRegistration_purpose.setColumns(10);
 				GridBagConstraints gbc_txtRegistration_purpose = new GridBagConstraints();
@@ -262,6 +268,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtRegistration_date = new JTextField();
+				txtRegistration_date.setEditable(false);
 				txtRegistration_date.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtRegistration_date.setColumns(10);
 				GridBagConstraints gbc_txtRegistration_date = new GridBagConstraints();
@@ -274,7 +281,7 @@ public class InputViewForm extends JDialog {
 			{
 				JLabel lblHeader_2 = new JLabel("To be filled up by VENDOR / CUSTOMER");
 				lblHeader_2.setForeground(new Color(85, 107, 47));
-				lblHeader_2.setFont(new Font("Helvetica LT Std Cond", Font.BOLD | Font.ITALIC, 15));
+				lblHeader_2.setFont(new Font("Segoe UI", Font.BOLD | Font.ITALIC, 15));
 				GridBagConstraints gbc_lblHeader_2 = new GridBagConstraints();
 				gbc_lblHeader_2.anchor = GridBagConstraints.WEST;
 				gbc_lblHeader_2.insets = new Insets(0, 0, 5, 5);
@@ -313,6 +320,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtCompany_name = new JTextField();
+				txtCompany_name.setEditable(false);
 				txtCompany_name.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtCompany_name.setColumns(10);
 				GridBagConstraints gbc_txtCompany_name = new GridBagConstraints();
@@ -334,6 +342,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtLocation_street = new JTextField();
+				txtLocation_street.setEditable(false);
 				txtLocation_street.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtLocation_street.setColumns(10);
 				GridBagConstraints gbc_txtLocation_street = new GridBagConstraints();
@@ -355,6 +364,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtLocation_city = new JTextField();
+				txtLocation_city.setEditable(false);
 				txtLocation_city.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtLocation_city.setColumns(10);
 				GridBagConstraints gbc_txtLocation_city = new GridBagConstraints();
@@ -376,6 +386,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtLocation_district = new JTextField();
+				txtLocation_district.setEditable(false);
 				txtLocation_district.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtLocation_district.setColumns(10);
 				GridBagConstraints gbc_txtLocation_district = new GridBagConstraints();
@@ -397,6 +408,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtLocation_country = new JTextField();
+				txtLocation_country.setEditable(false);
 				txtLocation_country.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtLocation_country.setColumns(10);
 				GridBagConstraints gbc_txtLocation_country = new GridBagConstraints();
@@ -418,6 +430,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtPostal_code = new JTextField();
+				txtPostal_code.setEditable(false);
 				txtPostal_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtPostal_code.setColumns(10);
 				GridBagConstraints gbc_txtPostal_code = new GridBagConstraints();
@@ -440,6 +453,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtTelephone_number = new JTextField();
+				txtTelephone_number.setEditable(false);
 				txtTelephone_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtTelephone_number.setColumns(10);
 				GridBagConstraints gbc_txtTelephone_number = new GridBagConstraints();
@@ -461,6 +475,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtBusiness_reg_number = new JTextField();
+				txtBusiness_reg_number.setEditable(false);
 				txtBusiness_reg_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtBusiness_reg_number.setColumns(10);
 				GridBagConstraints gbc_txtBusiness_reg_number = new GridBagConstraints();
@@ -482,6 +497,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtFax_number = new JTextField();
+				txtFax_number.setEditable(false);
 				txtFax_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtFax_number.setColumns(10);
 				GridBagConstraints gbc_txtFax_number = new GridBagConstraints();
@@ -501,7 +517,7 @@ public class InputViewForm extends JDialog {
 				contentPane.add(lblSubheader_2, gbc_lblSubheader_2);
 			}
 			{
-				JLabel lblRegion_bank_code = new JLabel("Region Bank Code :");
+				JLabel lblRegion_bank_code = new JLabel("* Region Bank Code :");
 				lblRegion_bank_code.setForeground(Color.RED);
 				lblRegion_bank_code.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblRegion_bank_code = new GridBagConstraints();
@@ -513,6 +529,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtRegion_bank_code = new JTextField();
+				txtRegion_bank_code.setEditable(false);
 				txtRegion_bank_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtRegion_bank_code.setColumns(10);
 				GridBagConstraints gbc_txtRegion_bank_code = new GridBagConstraints();
@@ -534,6 +551,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtBank_name = new JTextField();
+				txtBank_name.setEditable(false);
 				txtBank_name.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtBank_name.setColumns(10);
 				GridBagConstraints gbc_txtBank_name = new GridBagConstraints();
@@ -555,6 +573,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtPayment_code = new JTextField();
+				txtPayment_code.setEditable(false);
 				txtPayment_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtPayment_code.setColumns(10);
 				GridBagConstraints gbc_txtPayment_code = new GridBagConstraints();
@@ -576,6 +595,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtSwift_code = new JTextField();
+				txtSwift_code.setEditable(false);
 				txtSwift_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtSwift_code.setColumns(10);
 				GridBagConstraints gbc_txtSwift_code = new GridBagConstraints();
@@ -597,6 +617,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtAccount_number = new JTextField();
+				txtAccount_number.setEditable(false);
 				txtAccount_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtAccount_number.setColumns(10);
 				GridBagConstraints gbc_txtAccount_number = new GridBagConstraints();
@@ -627,6 +648,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtContact_person = new JTextField();
+				txtContact_person.setEditable(false);
 				txtContact_person.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtContact_person.setColumns(10);
 				GridBagConstraints gbc_txtContact_person = new GridBagConstraints();
@@ -648,6 +670,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtContact_number = new JTextField();
+				txtContact_number.setEditable(false);
 				txtContact_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtContact_number.setColumns(10);
 				GridBagConstraints gbc_txtContact_number = new GridBagConstraints();
@@ -669,6 +692,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtEmail_address = new JTextField();
+				txtEmail_address.setEditable(false);
 				txtEmail_address.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtEmail_address.setColumns(10);
 				GridBagConstraints gbc_txtEmail_address = new GridBagConstraints();
@@ -699,6 +723,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtOrder_currency = new JTextField();
+				txtOrder_currency.setEditable(false);
 				txtOrder_currency.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtOrder_currency.setColumns(10);
 				GridBagConstraints gbc_txtOrder_currency = new GridBagConstraints();
@@ -720,6 +745,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtPort_of_lading = new JTextField();
+				txtPort_of_lading.setEditable(false);
 				txtPort_of_lading.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtPort_of_lading.setColumns(10);
 				GridBagConstraints gbc_txtPort_of_lading = new GridBagConstraints();
@@ -741,6 +767,7 @@ public class InputViewForm extends JDialog {
 			}
 			{
 				txtIncoterms = new JTextField();
+				txtIncoterms.setEditable(false);
 				txtIncoterms.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtIncoterms.setColumns(10);
 				GridBagConstraints gbc_txtIncoterms = new GridBagConstraints();
@@ -757,7 +784,7 @@ public class InputViewForm extends JDialog {
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JLabel lblNewLabel = new JLabel("The information above has been CERTIFIED TRUE and CORRECT.");
-				lblNewLabel.setFont(new Font("Helvetica LT Std Cond", Font.ITALIC, 14));
+				lblNewLabel.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 				buttonPane.add(lblNewLabel);
 			}
 			{

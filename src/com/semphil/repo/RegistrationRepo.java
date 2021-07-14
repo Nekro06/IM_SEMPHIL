@@ -24,9 +24,16 @@ private DataSource dataSource;
 		
 		try(Connection connection = dataSource.getConnection();
 			Statement retrieveStatement = connection.createStatement();
-			ResultSet registrationResultSet = retrieveStatement.executeQuery("SELECT * FROM registration LEFT JOIN department ON department.dept_id = registration.dept_id" + 
+				
+			// Using WHERE clause in Multiple Table Processing	
+			ResultSet registrationResultSet = retrieveStatement.executeQuery("SELECT * FROM registration, department, vendor, payment, bank WHERE registration.dept_id = department.dept_id" + 
+					" AND registration.company_id = vendor.company_id AND registration.payment_id = payment.payment_id" +
+					" AND payment.region_bank_code = bank.region_bank_code ORDER BY registration_code ASC"))
+			
+			// Using LEFT JOIN clause in Multiple Table Processing	
+			/* ResultSet registrationResultSet = retrieveStatement.executeQuery("SELECT * FROM registration LEFT JOIN department ON department.dept_id = registration.dept_id" + 
 					" LEFT JOIN vendor ON vendor.company_id = registration.company_id LEFT JOIN payment ON payment.payment_id = registration.payment_id" +
-					" LEFT JOIN bank ON bank.region_bank_code = payment.region_bank_code")) {
+					" LEFT JOIN bank ON bank.region_bank_code = payment.region_bank_code ORDER BY registration_code ASC")) */ {
 			
 			while(registrationResultSet.next()) {
 				// Create objects where this repository is dependent
@@ -109,9 +116,16 @@ private DataSource dataSource;
 		
 		try(Connection connection = dataSource.getConnection();
 			Statement retrieveStatement = connection.createStatement();
-			ResultSet registrationResultSet = retrieveStatement.executeQuery("SELECT * FROM registration LEFT JOIN department ON department.dept_id = registration.dept_id" + 
+			
+			// Using WHERE clause in Multiple Table Processing	
+			ResultSet registrationResultSet = retrieveStatement.executeQuery("SELECT * FROM registration, department, vendor, payment, bank WHERE registration.dept_id = department.dept_id" + 
+					" AND registration.company_id = vendor.company_id AND registration.payment_id = payment.payment_id" +
+					" AND payment.region_bank_code = bank.region_bank_code AND registration_code = \'" + registration_code + "\'"))
+				
+			// Using LEFT JOIN clause in Multiple Table Processing	
+			/* ResultSet registrationResultSet = retrieveStatement.executeQuery("SELECT * FROM registration LEFT JOIN department ON department.dept_id = registration.dept_id" + 
 					" LEFT JOIN vendor ON vendor.company_id = registration.company_id LEFT JOIN payment ON payment.payment_id = registration.payment_id" +
-					" LEFT JOIN bank ON bank.region_bank_code = payment.region_bank_code WHERE registration_code = \'" + registration_code + "\'")) {
+					" LEFT JOIN bank ON bank.region_bank_code = payment.region_bank_code WHERE registration_code = \'" + registration_code + "\'")) */ {
 			
 			if(registrationResultSet.next()) {
 				// Data Entries of the Registration (including FK Columns)

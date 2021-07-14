@@ -12,7 +12,7 @@ public class InputTableModel extends AbstractTableModel{
 	private List<Registration> currentValue;
 	
 	public int getColumnCount() {
-		return 7;
+		return 6;
 	}
 	
 	public String getColumnName(int columnIndex) {
@@ -21,17 +21,15 @@ public class InputTableModel extends AbstractTableModel{
 			case 0:
 				return "Registration Code";
 			case 1:
-				return "Department ID";
+				return "Requesting Department";
 			case 2:
-				return "Name of Department";
-			case 3:
-				return "Company ID";
-			case 4:
 				return "Company Name";
-			case 5:
+			case 3:
 				return "Products / Services";
-			case 6:
-				return "Payment ID";
+			case 4:
+				return "Date of Registration";
+			case 5:
+				return "Purpose";
 			default:
 				return null;
 		}
@@ -55,17 +53,15 @@ public class InputTableModel extends AbstractTableModel{
 			case 0:
 				return registration.getRegistration_code();
 			case 1:
-				return registration.getDepartment().getDept_id();
-			case 2:
 				return registration.getDepartment().getRequesting_dept();
-			case 3:
-				return registration.getVendor().getCompany_id();
-			case 4:
+			case 2:
 				return registration.getVendor().getCompany_name();
-			case 5:
+			case 3:
 				return registration.getProduct_services();
-			case 6:
-				return registration.getPayment().getPayment_id();
+			case 4:
+				return registration.getRegistration_date();
+			case 5:
+				return registration.getRegistration_purpose();
 			default:
 				return null;
 		}
