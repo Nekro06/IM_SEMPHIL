@@ -22,6 +22,7 @@ import java.awt.event.ActionEvent;
 
 import com.semphil.bean.*;
 import com.semphil.repo.*;
+import javax.swing.JComboBox;
 
 @SuppressWarnings("serial")
 public class InputAddForm extends JDialog {
@@ -44,7 +45,6 @@ public class InputAddForm extends JDialog {
 	private JTextField txtFax_number;
 	private JTextField txtRegion_bank_code;
 	private JTextField txtBank_name;
-	private JTextField txtPayment_code;
 	private JTextField txtSwift_code;
 	private JTextField txtAccount_number;
 	private JTextField txtContact_person;
@@ -52,7 +52,8 @@ public class InputAddForm extends JDialog {
 	private JTextField txtEmail_address;
 	private JTextField txtOrder_currency;
 	private JTextField txtPort_of_lading;
-	private JTextField txtIncoterms;
+	private JComboBox cmbIncoterms;
+	private JComboBox cmbPayment_code;
 	public InputMgmtPanel inputMgmtPanel;
 
 	/**
@@ -71,6 +72,7 @@ public class InputAddForm extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public InputAddForm() {
 		setTitle("NEW VENDOR / CUSTOMER REGISTRATION AGREEMENT FORM");
 		setResizable(false);
@@ -91,7 +93,7 @@ public class InputAddForm extends JDialog {
 			{
 				JLabel lblHeader_1 = new JLabel("To be filled up by SEMPHIL - Requesting Department");
 				lblHeader_1.setForeground(new Color(75, 0, 130));
-				lblHeader_1.setFont(new Font("Helvetica LT Std Cond", Font.BOLD | Font.ITALIC, 15));
+				lblHeader_1.setFont(new Font("Segoe UI", Font.BOLD | Font.ITALIC, 15));
 				GridBagConstraints gbc_lblHeader_1 = new GridBagConstraints();
 				gbc_lblHeader_1.anchor = GridBagConstraints.WEST;
 				gbc_lblHeader_1.insets = new Insets(0, 0, 5, 5);
@@ -100,7 +102,7 @@ public class InputAddForm extends JDialog {
 				contentPane.add(lblHeader_1, gbc_lblHeader_1);
 			}
 			{
-				JLabel lblDept_id = new JLabel("Department ID :");
+				JLabel lblDept_id = new JLabel("* Department ID :");
 				lblDept_id.setForeground(Color.RED);
 				lblDept_id.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblDept_id = new GridBagConstraints();
@@ -112,6 +114,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				txtDept_id = new JTextField();
+				txtDept_id.setText("D0");
 				txtDept_id.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtDept_id.setColumns(10);
 				GridBagConstraints gbc_txtDept_id = new GridBagConstraints();
@@ -122,7 +125,7 @@ public class InputAddForm extends JDialog {
 				contentPane.add(txtDept_id, gbc_txtDept_id);
 			}
 			{
-				JLabel lblCompany_id = new JLabel("Company ID :");
+				JLabel lblCompany_id = new JLabel("* Company ID :");
 				lblCompany_id.setForeground(Color.RED);
 				lblCompany_id.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblCompany_id = new GridBagConstraints();
@@ -134,6 +137,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				txtCompany_id = new JTextField();
+				txtCompany_id.setText("E5");
 				txtCompany_id.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtCompany_id.setColumns(10);
 				GridBagConstraints gbc_txtCompany_id = new GridBagConstraints();
@@ -166,7 +170,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				JLabel lblRegistration_code = new JLabel("Registration Code :");
-				lblRegistration_code.setForeground(Color.RED);
+				lblRegistration_code.setForeground(Color.BLUE);
 				lblRegistration_code.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblRegistration_code = new GridBagConstraints();
 				gbc_lblRegistration_code.anchor = GridBagConstraints.EAST;
@@ -177,6 +181,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				txtRegistration_code = new JTextField();
+				txtRegistration_code.setText("A1");
 				txtRegistration_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtRegistration_code.setColumns(10);
 				GridBagConstraints gbc_txtRegistration_code = new GridBagConstraints();
@@ -208,7 +213,7 @@ public class InputAddForm extends JDialog {
 				contentPane.add(txtProducts_services, gbc_txtProducts_services);
 			}
 			{
-				JLabel lblPayment_id = new JLabel("Payment ID :");
+				JLabel lblPayment_id = new JLabel("* Payment ID :");
 				lblPayment_id.setForeground(Color.RED);
 				lblPayment_id.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblPayment_id = new GridBagConstraints();
@@ -220,6 +225,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				txtPayment_id = new JTextField();
+				txtPayment_id.setText("P1");
 				txtPayment_id.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtPayment_id.setColumns(10);
 				GridBagConstraints gbc_txtPayment_id = new GridBagConstraints();
@@ -274,7 +280,7 @@ public class InputAddForm extends JDialog {
 			{
 				JLabel lblHeader_2 = new JLabel("To be filled up by VENDOR / CUSTOMER");
 				lblHeader_2.setForeground(new Color(85, 107, 47));
-				lblHeader_2.setFont(new Font("Helvetica LT Std Cond", Font.BOLD | Font.ITALIC, 15));
+				lblHeader_2.setFont(new Font("Segoe UI", Font.BOLD | Font.ITALIC, 15));
 				GridBagConstraints gbc_lblHeader_2 = new GridBagConstraints();
 				gbc_lblHeader_2.anchor = GridBagConstraints.WEST;
 				gbc_lblHeader_2.insets = new Insets(0, 0, 5, 5);
@@ -440,6 +446,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				txtTelephone_number = new JTextField();
+				txtTelephone_number.setText("+");
 				txtTelephone_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtTelephone_number.setColumns(10);
 				GridBagConstraints gbc_txtTelephone_number = new GridBagConstraints();
@@ -482,6 +489,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				txtFax_number = new JTextField();
+				txtFax_number.setText("+");
 				txtFax_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtFax_number.setColumns(10);
 				GridBagConstraints gbc_txtFax_number = new GridBagConstraints();
@@ -501,7 +509,7 @@ public class InputAddForm extends JDialog {
 				contentPane.add(lblSubheader_2, gbc_lblSubheader_2);
 			}
 			{
-				JLabel lblRegion_bank_code = new JLabel("Region Bank Code :");
+				JLabel lblRegion_bank_code = new JLabel("* Region Bank Code :");
 				lblRegion_bank_code.setForeground(Color.RED);
 				lblRegion_bank_code.setFont(new Font("Helvetica LT Std Light", Font.BOLD, 15));
 				GridBagConstraints gbc_lblRegion_bank_code = new GridBagConstraints();
@@ -554,15 +562,15 @@ public class InputAddForm extends JDialog {
 				contentPane.add(lblPayment_code, gbc_lblPayment_code);
 			}
 			{
-				txtPayment_code = new JTextField();
-				txtPayment_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				txtPayment_code.setColumns(10);
-				GridBagConstraints gbc_txtPayment_code = new GridBagConstraints();
-				gbc_txtPayment_code.fill = GridBagConstraints.HORIZONTAL;
-				gbc_txtPayment_code.insets = new Insets(0, 0, 5, 5);
-				gbc_txtPayment_code.gridx = 1;
-				gbc_txtPayment_code.gridy = 14;
-				contentPane.add(txtPayment_code, gbc_txtPayment_code);
+				String[] paymentcodeChoices = { " ","PIA", "Net 7", "Net 10", "Net 30", "EOM", "1MD", "2MD", "CBS", "CIA", "CWO"};
+				cmbPayment_code = new JComboBox(paymentcodeChoices);
+				cmbPayment_code.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				GridBagConstraints gbc_cmbPayment_code = new GridBagConstraints();
+				gbc_cmbPayment_code.insets = new Insets(0, 0, 5, 5);
+				gbc_cmbPayment_code.fill = GridBagConstraints.HORIZONTAL;
+				gbc_cmbPayment_code.gridx = 1;
+				gbc_cmbPayment_code.gridy = 14;
+				contentPane.add(cmbPayment_code, gbc_cmbPayment_code);
 			}
 			{
 				JLabel lblSwift_code = new JLabel("Swift Code / CNAPS :");
@@ -648,6 +656,7 @@ public class InputAddForm extends JDialog {
 			}
 			{
 				txtContact_number = new JTextField();
+				txtContact_number.setText("+");
 				txtContact_number.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
 				txtContact_number.setColumns(10);
 				GridBagConstraints gbc_txtContact_number = new GridBagConstraints();
@@ -740,15 +749,15 @@ public class InputAddForm extends JDialog {
 				contentPane.add(lblIncoterms, gbc_lblIncoterms);
 			}
 			{
-				txtIncoterms = new JTextField();
-				txtIncoterms.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
-				txtIncoterms.setColumns(10);
-				GridBagConstraints gbc_txtIncoterms = new GridBagConstraints();
-				gbc_txtIncoterms.fill = GridBagConstraints.HORIZONTAL;
-				gbc_txtIncoterms.insets = new Insets(0, 0, 0, 5);
-				gbc_txtIncoterms.gridx = 1;
-				gbc_txtIncoterms.gridy = 21;
-				contentPane.add(txtIncoterms, gbc_txtIncoterms);
+				String[] incotermsChoices = { " ","EXW", "FCA", "FAS", "FOB", "CFR", "CIF", "CPT", "CIP", "DAP", "DPU", "DDP"};
+				cmbIncoterms = new JComboBox(incotermsChoices);
+				cmbIncoterms.setFont(new Font("Helvetica LT Std", Font.PLAIN, 16));
+				GridBagConstraints gbc_cmbIncoterms = new GridBagConstraints();
+				gbc_cmbIncoterms.insets = new Insets(0, 0, 0, 5);
+				gbc_cmbIncoterms.fill = GridBagConstraints.HORIZONTAL;
+				gbc_cmbIncoterms.gridx = 1;
+				gbc_cmbIncoterms.gridy = 21;
+				contentPane.add(cmbIncoterms, gbc_cmbIncoterms);
 			}
 		}
 		{
@@ -756,8 +765,8 @@ public class InputAddForm extends JDialog {
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
-				JLabel lblNewLabel = new JLabel("I hereby certify that all information above are TRUE and CORRECT.");
-				lblNewLabel.setFont(new Font("Helvetica LT Std Cond", Font.ITALIC, 14));
+				JLabel lblNewLabel = new JLabel("* If DEPARTMENT / COMPANY / PAYMENT / BANK information is available in the database, only put their corresponding IDs. ");
+				lblNewLabel.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 				buttonPane.add(lblNewLabel);
 			}
 			{
@@ -765,62 +774,69 @@ public class InputAddForm extends JDialog {
 				btnSave.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
 						
-						Department department =
-								new Department(txtDept_id.getText(),
-												txtRequesting_dept.getText());
+						int response = JOptionPane.showConfirmDialog(null, 
+				                "Are you sure you want to register the following details?", "Confirming Registration",JOptionPane.YES_NO_OPTION);
 						
-						inputMgmtPanel.departmentRepo.addDepartment(department);
-						
-						Vendor vendor =
-								new Vendor(txtCompany_id.getText(),
-											txtCompany_name.getText(),
-											txtLocation_street.getText(),
-											txtLocation_city.getText(),
-											txtLocation_district.getText(),
-											txtLocation_country.getText(),
-											txtPostal_code.getText(),
-											txtTelephone_number.getText(),
-											txtFax_number.getText(),
-											txtBusiness_reg_number.getText());
-						inputMgmtPanel.vendorRepo.addVendor(vendor);
-						
-						Bank bank =
-								new Bank(txtRegion_bank_code.getText(),
-										txtBank_name.getText(),
-										txtSwift_code.getText());
-						
-						inputMgmtPanel.bankRepo.addBank(bank);
-						
-						Payment payment = 
-								new Payment(txtPayment_id.getText(),
-											txtCompany_id.getText(),
-											txtPayment_code.getText(),
-											txtRegion_bank_code.getText(),
-											txtAccount_number.getText());
-						
-						inputMgmtPanel.paymentRepo.addPayment(payment);
-						
-						Registration registration =
-								new Registration(txtRegistration_code.getText(),
-													txtDept_id.getText(),
-													txtCompany_id.getText(),
-													txtProducts_services.getText(),
-													txtRegistration_purpose.getText(),
-													txtRegistration_date.getText(),
-													txtContact_person.getText(),
-													txtContact_number.getText(),
-													txtEmail_address.getText(),
-													txtPayment_id.getText(),
-													txtOrder_currency.getText(),
-													txtPort_of_lading.getText(),
-													txtIncoterms.getText());
-						
-						inputMgmtPanel.registrationRepo.addRegistration(registration);
-						
-						clearFields();
-						JOptionPane.showMessageDialog(null, "Successfully saved Registration Form to the database!");
-						inputMgmtPanel.inputTableModel.refresh();
-						setVisible(false);
+						if(response ==  JOptionPane.YES_OPTION) {
+							Department department =
+									new Department(txtDept_id.getText(),
+													txtRequesting_dept.getText());
+							
+							inputMgmtPanel.departmentRepo.addDepartment(department);
+							
+							Vendor vendor =
+									new Vendor(txtCompany_id.getText(),
+												txtCompany_name.getText(),
+												txtLocation_street.getText(),
+												txtLocation_city.getText(),
+												txtLocation_district.getText(),
+												txtLocation_country.getText(),
+												txtPostal_code.getText(),
+												txtTelephone_number.getText(),
+												txtFax_number.getText(),
+												txtBusiness_reg_number.getText());
+							inputMgmtPanel.vendorRepo.addVendor(vendor);
+							
+							Bank bank =
+									new Bank(txtRegion_bank_code.getText(),
+											txtBank_name.getText(),
+											txtSwift_code.getText());
+							
+							inputMgmtPanel.bankRepo.addBank(bank);
+							
+							Payment payment = 
+									new Payment(txtPayment_id.getText(),
+												txtCompany_id.getText(),
+												(String) cmbPayment_code.getSelectedItem(),
+												txtRegion_bank_code.getText(),
+												txtAccount_number.getText());
+							
+							inputMgmtPanel.paymentRepo.addPayment(payment);
+							
+							Registration registration =
+									new Registration(txtRegistration_code.getText(),
+														txtDept_id.getText(),
+														txtCompany_id.getText(),
+														txtProducts_services.getText(),
+														txtRegistration_purpose.getText(),
+														txtRegistration_date.getText(),
+														txtContact_person.getText(),
+														txtContact_number.getText(),
+														txtEmail_address.getText(),
+														txtPayment_id.getText(),
+														txtOrder_currency.getText(),
+														(String) cmbIncoterms.getSelectedItem(),
+														txtPort_of_lading.getText());
+							
+							inputMgmtPanel.registrationRepo.addRegistration(registration);
+							
+							clearFields();
+							JOptionPane.showMessageDialog(null, "Successfully saved Registration Form to the database!");
+							inputMgmtPanel.inputTableModel.refresh();
+							setVisible(false);
+						}
+						else 
+							setVisible(true);
 					}
 				});
 				btnSave.setFont(new Font("Helvetica LT Std", Font.PLAIN, 13));
@@ -833,7 +849,7 @@ public class InputAddForm extends JDialog {
 				btnCancel.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
 						int response = JOptionPane.showConfirmDialog(null, 
-				                "Are you sure you want to leave? All inputted details shall be cleared.", "Confirmation",JOptionPane.YES_NO_CANCEL_OPTION);
+				                "Are you sure you want to leave? All inputted details shall be cleared.", "Exit Form?",JOptionPane.YES_NO_CANCEL_OPTION);
 						
 						if(response ==  JOptionPane.YES_OPTION) {
 							clearFields();
@@ -852,12 +868,12 @@ public class InputAddForm extends JDialog {
 	}
 	
 	private void clearFields() {
-		txtDept_id.setText("");
-		txtCompany_id.setText("");
+		txtDept_id.setText("D0");
+		txtCompany_id.setText("E5");
 		txtRequesting_dept.setText("");
-		txtRegistration_code.setText("");
+		txtRegistration_code.setText("A1");
 		txtProducts_services.setText("");
-		txtPayment_id.setText("");
+		txtPayment_id.setText("P1");
 		txtRegistration_purpose.setText("");
 		txtRegistration_date.setText("");
 		txtCompany_name.setText("");
@@ -866,20 +882,18 @@ public class InputAddForm extends JDialog {
 		txtLocation_district.setText("");
 		txtLocation_country.setText("");
 		txtPostal_code.setText("");
-		txtTelephone_number.setText("");
+		txtTelephone_number.setText("+");
 		txtBusiness_reg_number.setText("");
-		txtFax_number.setText("");
+		txtFax_number.setText("+");
 		txtRegion_bank_code.setText("");
 		txtBank_name.setText("");
-		txtPayment_code.setText("");
 		txtSwift_code.setText("");
 		txtAccount_number.setText("");
 		txtContact_person.setText("");
-		txtContact_number.setText("");
+		txtContact_number.setText("+");
 		txtEmail_address.setText("");
 		txtOrder_currency.setText("");
 		txtPort_of_lading.setText("");
-		txtIncoterms.setText("");
 	}
 
 }

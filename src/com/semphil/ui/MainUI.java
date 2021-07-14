@@ -18,6 +18,8 @@ import javax.swing.border.EmptyBorder;
 
 import com.semphil.bean.*;
 import com.semphil.repo.*;
+import java.awt.Component;
+import javax.swing.Box;
 
 public class MainUI extends JFrame {
 	
